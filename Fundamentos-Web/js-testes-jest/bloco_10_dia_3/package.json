@@ -1,0 +1,15 @@
+{
+  "name": "bloco_10_dia_3",
+  "version": "1.0.0",
+  "description": "As Mock functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
