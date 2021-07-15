@@ -1,0 +1,64 @@
+body {
+  margin: 0px;
+}
+
+#cabecalho {
+  text-align: center;
+  margin: 0;
+  border-bottom: 5px solid gray;
+}
+
+.input-container {
+  background-color: gray;
+  width: 100%;
+  padding-top: 10px;
+  transition: all 0.25s ease;
+}
+
+.input-container span {
+  font-size: 30px;
+  display: block;
+  font-weight: 600;
+}
+
+#container-left {
+  display: inline-block;
+  width: 45%;
+  margin-left: 5rem;
+  position: relative;
+  text-align: justify;
+}
+
+#container-rigth {
+  display: inline;
+  width: 45%;
+  margin-right: 5rem;
+  float: right;
+  position: relative;
+  text-align: justify;
+}
+
+label {
+  color: rgb(2, 24, 2);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
+.rodape {
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+  border-top: 5px solid gray;
+  padding-top: 30px;
+}
+
+.fundoOption {
+  border-radius: 100%;
+  border: 3px solid green;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-left: 30px;
+}

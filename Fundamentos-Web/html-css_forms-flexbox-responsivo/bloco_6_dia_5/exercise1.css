@@ -1,0 +1,50 @@
+body {
+  font-size: 18px;
+  margin: 15px 15px;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: lightcoral;
+    font-size: 25px;
+    margin: 50px 50px;
+  }
+
+  .grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .grid figure {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: blue;
+    font-size: 30px;
+    margin: 50px 50px;
+    max-width: 1024px;
+  }
+  
+}

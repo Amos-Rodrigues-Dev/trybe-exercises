@@ -1,0 +1,153 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: burlywood;
+    margin: 25px 30px;
+    font-size: 28px;
+    text-align: justify;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .container header {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    font-size: 28px;
+    align-items: center;
+  }
+
+  aside {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    font-size: 28px;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body {
+    background-color: cadetblue;
+    margin: 50px 50px;
+    font-size: 22px;
+    text-align: justify;
+  }
+
+  .container header {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container header p {
+    font-size: 28px;
+  }
+
+  .container header nav {
+    width: 80%;
+  }
+
+  .container header nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex: 0 1 80%;
+    font-size: 25px;
+  }
+
+  #container-aside {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 23px;
+  }
+
+  .container footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: rgb(151, 12, 12);
+    margin: 50px 50px;
+    font-size: 22px;
+    text-align: justify;
+  }
+
+  .container header {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container header p {
+    font-size: 28px;
+  }
+
+  .container header nav {
+    width: 80%;
+  }
+
+  .container header nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex: 0 1 80%;
+    font-size: 25px;
+  }
+
+  #container-aside {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 23px;
+  }
+
+  .container footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 23px;
+  }
+
+  .main-content h1 {
+    width: 100%;
+  }
+
+  .main-item {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 47%;
+    /* flex-basis: 50%; */
+    background-color: greenyellow;
+    
+  }
+}
