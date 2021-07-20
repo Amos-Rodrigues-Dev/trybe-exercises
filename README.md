@@ -31,21 +31,24 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 4: Introdução - JavaScript
 
-- [ ] 4-1: _JavaScript - Primeiros passos_
-- [ ] 4-2: _JavaScript - Array e loop For_
-- [ ] 4-3: _JavaScript - Objetos e funções_
-- [ ] 4-4: _JavaScript - DOM e seletores_
-- [ ] 4-5: _JavaScript - Trabalhando com elementos_
-- [ ] 4-6: _JavaScript - Eventos_
-- [ ] 4-7: _JavaScript - Web Storage_
+- [X] 4-1: _JavaScript - Primeiros passos_
+- [X] 4-2: _JavaScript - Array e loop For_
+- [X] 4-3: _JavaScript - Lógica de Programação e Algorítmo_
+- [X] 4-4: _JavaScript - Objetos e funções_
+- [X] 4-5: _[Projeto Playground Functions](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/playground-functions)_
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
 
-- [ ] 5-1: _[Projeto ] (https://github.io)_
-- [ ] 5-2: _[Projeto ] (https://github.io)_
-- [ ] 5-3: _[Projeto ] (https://github.io)_
-- [ ] 5-4: _[Projeto ] (https://github.io)_
-- [ ] 5-5: _[Projeto ] (https://github.io)_ 
+- [X] 5-1: _JavaScript - DOM e seletores_
+- [X] 5-2: _JavaScript - Trabalhando com elementos_
+- [X] 5-3: _JavaScript - Eventos_
+- [X] 5-4: _JavaScript - Web Storage_
+- [X] 5-5: _JavaScript - Fundamentos-Projetos_
+- [X] 5-5: _[Projeto Arte com Pixels](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/pixel-art)_
+- [X] 5-6: _[Projeto Lista de Tarefas](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/todo-list)_
+- [X] 5-7: _[Projeto Meme Generator](github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/meme-generator)_
+- [X] 5-7: _[Projeto Adivinhe a Cor](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/color-guess)_
+- [X] 5-7: _[Projeto Carta Misteriosa](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/mister-letter)_ 
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
