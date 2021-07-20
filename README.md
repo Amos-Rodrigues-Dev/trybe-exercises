@@ -27,7 +27,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [x] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [x] 3-4: _HTML Semântico_
-- [X] 3-5: _[Projeto ] (https://github.io)_
+- [X] 3-5: _[Projeto Lessons-learned](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/lessons-learned)_
 
 ##### Bloco 4: Introdução - JavaScript
 
@@ -260,6 +260,3 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] B-1: _CSS Animations - Part 1_
 - [ ] B-2: _CSS Animations - Part 2_
 - [ ] B-3: _[Projeto ] (https://github.io)_
-
-# [...]
-
