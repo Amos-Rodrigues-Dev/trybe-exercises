@@ -4,8 +4,9 @@ import PokedexGenerator from './components/PokedexGenerator';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header className="App">
+      <h1>Pokedex</h1>
         <PokedexGenerator dataPokemons={ data } />
       </header>
     </div>

@@ -5,7 +5,7 @@ class PokedexGenerator extends Component {
   render() {
     const { dataPokemons } = this.props;
     return (
-      <div>
+      <div className='App-header'>
         { dataPokemons.map(({ name, type, averageWeight, image, id }) => (
           <PokemonCard 
             key={ id }
