@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import PokemonCard from './PokemonCard';
 
 class PokedexGenerator extends Component {
@@ -18,6 +19,26 @@ class PokedexGenerator extends Component {
       </div>
     );
   }
+}
+
+PokedexGenerator.propTypes = {
+  dataPokemons: PropTypes.arrayOf(
+    PropTypes.shape(
+      {
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        averageWeight: PropTypes.objectOf(
+          PropTypes.shape(
+            {
+              value: PropTypes.number.isRequired,
+              measurementUnit: PropTypes.string.isRequired,
+            }
+          ),
+        ).isRequired,
+      }
+    ),
+  ).isRequired,
 }
 
 export default PokedexGenerator;

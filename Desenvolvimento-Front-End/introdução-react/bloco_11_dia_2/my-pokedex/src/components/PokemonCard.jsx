@@ -19,9 +19,9 @@ class PokemonCard extends Component {
 }
 
 PokemonCard.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   type: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
   measurementUnit: PropTypes.string.isRequired,
 }
 
