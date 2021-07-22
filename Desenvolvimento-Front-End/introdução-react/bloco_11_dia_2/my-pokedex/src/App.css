@@ -16,7 +16,6 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  border: 3px solid yellow;
   width: 90%;
 }
 
@@ -25,7 +24,6 @@ body {
   justify-content: space-around;
   text-align: center;
   flex-basis: 40%;
-  /* width: 100%; */
   padding: 1rem;
   background-color: #555555;
   margin: 1rem;
