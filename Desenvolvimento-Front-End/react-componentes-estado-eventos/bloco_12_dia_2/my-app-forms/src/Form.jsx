@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import './Form.css';
+import EstadoFavorito from './EstadoFavorito';
+import DadosPessoais from './DadosPessoais';
+import PalavraChave from './PalavraChave';
 
 class Form extends Component {
   constructor() {
@@ -9,13 +12,20 @@ class Form extends Component {
 
     this.state = {
       estadoFavorito: '',
+      nome: '',
+      email: '',
+      idade: 0,
+      vaiComparecer: '',
+      palavraChaveFavorita: ''
     };
   }
 
+  handleChange({ target }) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
 
-  handleChange(event) {
     this.setState({
-      estadoFavorito: event.target.value,
+      [name]: value
     });
   }
 
@@ -24,21 +34,20 @@ class Form extends Component {
       <div>
         <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
         <form className="form">
-          <label>
-            Diga qual o seu Estado favorito! De React ou do Brasil, você decide! =)
-              <textarea 
-                name="estadoFavorito" 
-                value={this.state.estadoFavorito} 
-                onChange={this.handleChange} 
-              />
-          </label>  
-          <input
-            type="number"
-            name="idade"
+          <EstadoFavorito 
+          value={this.state.estadoFavorito} 
+          handleChange={this.handleChange} 
           />
-          <input
-            type="checkbox"
-            name="vaiComparecer"
+          <DadosPessoais 
+            valueName={this.state.nome}
+            valueEmail={this.state.email}
+            valueIdade={this.state.idade}
+            valueVaiComparecer={this.state.vaiComparecer}
+            handleChange={this.handleChange}
+          />
+          <PalavraChave 
+          value={this.state.palavraChaveFavorita} 
+          handleChange={this.handleChange}
           />
         </form>
       </div>
