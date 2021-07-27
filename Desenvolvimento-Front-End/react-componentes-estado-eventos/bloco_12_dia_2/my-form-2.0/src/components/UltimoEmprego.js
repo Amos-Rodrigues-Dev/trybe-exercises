@@ -4,8 +4,8 @@ class UltimoEmprego extends Component {
   render() {
     const { changeHandler } = this.props;
     return (
-      <fieldset className="Form">
-      <legend>Último Emprego</legend>
+      <fieldset>
+      <legend>Emprego Anterior</legend>
 
         <div className="container">
           <label>Resumo do Currículo:
@@ -13,7 +13,7 @@ class UltimoEmprego extends Component {
               name='resume' 
               maxLength='1000' 
               required
-              
+              onChange={changeHandler}
             />
           </label>
         </div>
@@ -25,19 +25,21 @@ class UltimoEmprego extends Component {
               name='role'
               maxLength='40' 
               required
-
+              onChange={changeHandler}
+              onMouseEnter={() => {
+                alert('Preencha com cuidado esta informação.');
+              }}
             />
           </label>
 
         </div>
-
 
         <div className="container">
           <label>Descrição do cargo:
             <textarea 
               name='roleDescription'
               maxLength='500'
-
+              onChange={changeHandler}
             />
           </label>
         </div>

@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
 import DadosPessoais from './DadosPessoais';
 import UltimoEmprego from './UltimoEmprego';
+import FormError from './FormError';
+import FormDataDisplay from './FormDataDisplay';
+
+const INITIAL_STATE = {
+  name: '',
+  email: '',
+  cpf: '',
+  address: '',
+  city: '',
+  countryState: '',
+  addressType: '',
+  resume: '',
+  role: '',
+  roleDescription: '',
+  formError: {},
+  submitted: false,
+}
 
 class FormCurriculo extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-      email: '',
-      cpf: '',
-      address: '',
-      city: '',
-      countryState: '',
-      addressType: '',
-      resume: '',
-      role: '',
-      roleDescription: '',
-      formError: {},
-      submitted: false,
-    };
+  constructor(propos) {
+    super(propos);
+    this.state = INITIAL_STATE;
 
     this.changeHandler = this.changeHandler.bind(this);
+    this.validateField = this.validateField.bind(this);
   }
 
   changeHandler({ target }) {
@@ -62,21 +66,43 @@ class FormCurriculo extends Component {
     return '';
   }
   
-  validateAddress = address => address.replace(/[^\w\s]/gi, '')
+  validateAddress = address => address.replace(/[^\w\s]/gi, '');
+
+  resetForm = () => { this.setState(INITIAL_STATE) };
+
+  sendForm = () => { this.setState({ submitted: true }) };
 
   render() {
+    const { submitted } = this.state;
+
     return (
-      <section className="Form-container">
+      <main className="Form-container">
         <h1>Currículo</h1>
         <form className="Form">
-        <DadosPessoais 
-          changeHandler={this.changeHandler}
-          onBlurHandler= { this.onBlurHandler }
-          currentState= { this.state } 
-        />
-        <UltimoEmprego changeHandler={this.changeHandler} />
+          <DadosPessoais 
+            changeHandler={this.changeHandler}
+            onBlurHandler= { this.onBlurHandler }
+            currentState= { this.state } 
+          />
+          <UltimoEmprego changeHandler={this.changeHandler} />
+          <input
+              type="button"
+              onClick={ this.sendForm }
+              value="Enviar"
+          />
+          <input
+            type="reset"
+            onClick={ this.resetForm }
+            value="Limpar"
+          />
         </form>
-      </section>
+        <div className="container">
+          <FormError formError={this.state.formError} />
+        </div>
+  
+        { submitted && <FormDataDisplay currentState={ this.state } /> }
+
+      </main>
     );
   }
 }

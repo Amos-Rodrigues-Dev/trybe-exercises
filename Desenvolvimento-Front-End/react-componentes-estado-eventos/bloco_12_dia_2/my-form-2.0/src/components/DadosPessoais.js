@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 const states = ['Rio de Janeiro', 'Minas Gerais', 'Amapá', 'Amazonas', 'São Paulo', 'Ceará', 'Distrito Federal'];
 
-
 class DadosPessoais extends Component {
   render() {
     const { changeHandler, currentState, onBlurHandler } = this.props;
     
     return (
       
-      <fieldset className="Form">
+      <fieldset>
         
         <legend>Dados Pessoais</legend>
 
@@ -19,7 +18,6 @@ class DadosPessoais extends Component {
               type='text' 
               name='name' 
               value={currentState.name}
-              size='40' 
               maxLength='40' 
               require
               onChange={changeHandler}
@@ -33,7 +31,6 @@ class DadosPessoais extends Component {
               id='email'
               type='email' 
               name='email'
-              size='50' 
               maxLength='50' 
               required
               onChange={changeHandler}
@@ -59,7 +56,6 @@ class DadosPessoais extends Component {
             <input 
               id='address' 
               type='text' 
-              size='50' 
               name='address'
               maxLength='200'
               onChange={changeHandler}

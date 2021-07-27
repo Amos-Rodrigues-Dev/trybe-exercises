@@ -13,15 +13,33 @@
   color: white;
 }
 
-.Form-container .Form {
+.Form-container .Form fieldset {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  align-items: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 60vw;
 }
- 
-.Form-container .Form input {
-  background-color: aqua;
-  /* text-transform: uppercase; */
+
+.Form-container .Form input[type='button'], input[type='reset'] {
+  margin-right: 10px;
+  color: white;
+  background: green;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
   font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.container textarea {
+  width: 100%;
+  
+}
+
+.container input[type='text'], input[type='email'] {
+  width: 100%;
 }
