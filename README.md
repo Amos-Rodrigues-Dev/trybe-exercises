@@ -94,15 +94,15 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 11: Introdução - React
 
-- [ ] 11-1: _'Hello, world!' no React!_
-- [ ] 11-2: _Componentes React_
-- [ ] 11-3: _[Projeto - Movie Cards Library]()_
+- [X] 11-1: _'Hello, world!' no React!_
+- [X] 11-2: _Componentes React_
+- [X] 11-3: _[Projeto - Movie Cards Library](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/movie-cards-library)_
 
 ##### Bloco 12: React
 
-- [ ] 12-1: _Components com estado_
-- [ ] 12-2: _Eventos e formulários no React_
-- [ ] 12-3: _[Projeto - Movie Cards Library Stateful]()_
+- [X] 12-1: _Components com estado e eventos_
+- [X] 12-2: _Formulários no React_
+- [X] 12-3: _[Projeto - Movie Cards Library Stateful](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/movie-cards-library-stateful)_
 
 ##### Bloco 13: React
 
