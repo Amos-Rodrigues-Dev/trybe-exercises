@@ -22,11 +22,11 @@ class App extends Component {
     })
   }
 
-  async fetchCharacterAsync() {
-    const response = await fetch('https://rickandmortyapi.com/api/character');
-    const data = await response.json();
-    this.setState({characters: data.results})
-  }
+  // async fetchCharacterAsync() {
+  //   const response = await fetch('https://rickandmortyapi.com/api/character');
+  //   const data = await response.json();
+  //   this.setState({characters: data.results})
+  // }
 
   render() {
     const { characters } = this.state;
