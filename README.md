@@ -113,7 +113,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 ##### Bloco 14: Metodologias Ágeis
 
 - [X] 14-1: _Metodologias Ágeis_
-- [X] 14-2: _[Projeto - Frontend Online Store](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/frontend-online-store)_
+- [X] 14-2: _[Projeto - Frontend Online Store](https://github.com/Amos-Rodrigues-Dev/frontend-online-store)_
 
 ##### Bloco 15: Testes em React
 
