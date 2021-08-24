@@ -96,19 +96,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [X] 11-1: _'Hello, world!' no React!_
 - [X] 11-2: _Componentes React_
-- [X] 11-3: _[Projeto - Movie Cards Library](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/movie-cards-library)_
+- [X] 11-3: _[Projeto - Movie Cards Library](https://github.com/Amos-Rodrigues-Dev/movie-cards-library)_
 
 ##### Bloco 12: React
 
 - [X] 12-1: _Components com estado e eventos_
 - [X] 12-2: _Formulários no React_
-- [X] 12-3: _[Projeto - Movie Cards Library Stateful](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/movie-cards-library-stateful)_
+- [X] 12-3: _[Projeto - Movie Cards Library Stateful](https://github.com/Amos-Rodrigues-Dev/movie-cards-library-stateful)_
 
 ##### Bloco 13: React
 
 - [X] 13-2: _Ciclo de vida de componentes em React_
 - [X] 13-3: _React Router_
-- [X] 13-4: _[Projeto - Movie Cards Library CRUD](https://github.com/Amos-Rodrigues-Dev/Amos-Rodrigues-Dev.github.io/tree/main/movie-card-library-crud)_
+- [X] 13-4: _[Projeto - Movie Cards Library CRUD](https://github.com/Amos-Rodrigues-Dev/movie-card-library-crud)_
 
 ##### Bloco 14: Metodologias Ágeis
 
@@ -119,11 +119,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 15-1: _Testando React com a React Testing Library_
 - [x] 15-2: _Testando React com a React Testing Library - Parte 2_
-- [ ] 15-3: _[Projeto - Testes em React]()_
+- [x] 15-3: _[Projeto - Testes em React](https://github.com/Amos-Rodrigues-Dev/react-testing-library)_
 
 ##### Bloco 16: Introdução ao Redux
 
-- [ ] 16-1: _Introdução ao Redux_
+- [x] 16-1: _Introdução ao Redux_
 - [ ] 16-2: _React com Redux - Parte 1_
 - [ ] 16-3: _React com Redux - Prática_
 - [ ] 16-4: _React com Redux - Parte 2_

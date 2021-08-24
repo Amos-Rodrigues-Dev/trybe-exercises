@@ -42,4 +42,3 @@
 - [ ] criar a função mapStateToProps
 - [ ] criar a função mapDispatchToProps
 - [ ] fazer o connect
-
