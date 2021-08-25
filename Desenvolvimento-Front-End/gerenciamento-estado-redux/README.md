@@ -98,16 +98,16 @@
   
 ```
   const mapStateToProps = state => ({
-    myFirstState: state.myReducer.state});
+    myFirstState: state.myReducer.state
+  });
 ```
 
   
 - [ ] criar a função mapDispatchToProps
 
-```const mapDispatchToProps = (dispatch) => ({
-  
-     myFirstDispatch: (state) => dispatch(newAction(state))
-  
+```
+  const mapDispatchToProps = (dispatch) => ({
+    myFirstDispatch: (state) => dispatch(newAction(state))
   });
 ```
   
