@@ -101,7 +101,7 @@
 
   
 - [ ] criar a função mapDispatchToProps
-  
+
 ```const mapDispatchToProps = (dispatch) => ({
       myFirstDispatch: (state) => dispatch(newAction(state))
   });
@@ -109,4 +109,4 @@
   
 - [ ] fazer o connect 
   
-```export default connect(mapStateToProps, mapDispatchToProps)(Component)
+  `export default connect(mapStateToProps, mapDispatchToProps)(Component)
