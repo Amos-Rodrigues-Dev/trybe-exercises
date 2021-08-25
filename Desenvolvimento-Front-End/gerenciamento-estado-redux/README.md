@@ -57,7 +57,8 @@
 
 *Na pasta reducers:*
 - [ ] criar os reducers necessários
-  `const INITIAL_STATE = {
+  
+```const INITIAL_STATE = {
     state: '',
     };
 
@@ -70,15 +71,18 @@
       }
     }
   
-  export default myReducer;`
+  export default myReducer;
+```
   
 - [ ] configurar os exports do arquivo index.js
-  `import { combineReducers } from 'redux';
+  
+```import { combineReducers } from 'redux';
    import myReducer from './myReducer';
 
    const rootReducer = combineReducers({ myReducer });
 
-   export default rootReducer;`
+   export default rootReducer;
+```
 
 *Na pasta actions:*
 - [ ] criar os actionTypes, por exemplo: `export const ADD_TO_CART = 'ADD_TO_CART';`
