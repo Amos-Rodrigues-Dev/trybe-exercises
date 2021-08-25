@@ -44,14 +44,14 @@
 *No arquivo store/index.js:*
 - [ ] importar o rootReducer e criar a store
 - [ ] configurar o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
- `import { createStore, compose } from 'redux';
+ ```import { createStore, compose } from 'redux';
   import rootReducer from '../reducers';
 
   const extension = window.devToolsExtension() || ((f) => f);
 
   const store = createStore(rootReducer, compose(extension));
 
-  export default store;`
+  export default store;```
 
 *Na pasta reducers:*
 - [ ] criar os reducers necessários
