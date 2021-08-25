@@ -96,8 +96,10 @@
 *Nos componentes:*
 - [ ] criar a função mapStateToProps
   
-  `const mapStateToProps = state => ({
-    myFirstState: state.myReducer.state});`
+```
+  const mapStateToProps = state => ({
+    myFirstState: state.myReducer.state});
+```
 
   
 - [ ] criar a função mapDispatchToProps
