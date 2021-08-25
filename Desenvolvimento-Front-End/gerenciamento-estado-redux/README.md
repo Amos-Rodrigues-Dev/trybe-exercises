@@ -45,7 +45,8 @@
 - [ ] importar o rootReducer e criar a store
 - [ ] configurar o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 
-```import { createStore, compose } from 'redux';
+```
+  import { createStore, compose } from 'redux';
   import rootReducer from '../reducers';
 
   const extension = window.devToolsExtension() || ((f) => f);
@@ -58,7 +59,8 @@
 *Na pasta reducers:*
 - [ ] criar os reducers necessários
   
-```const INITIAL_STATE = {
+```
+  const INITIAL_STATE = {
     state: '',
     };
 
@@ -76,7 +78,8 @@
   
 - [ ] configurar os exports do arquivo index.js
   
-```import { combineReducers } from 'redux';
+```
+   import { combineReducers } from 'redux';
    import myReducer from './myReducer';
 
    const rootReducer = combineReducers({ myReducer });
