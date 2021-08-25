@@ -85,18 +85,25 @@
 ```
 
 *Na pasta actions:*
-- [ ] criar os actionTypes, por exemplo: `export const ADD_TO_CART = 'ADD_TO_CART';`
-- [ ] criar os actions creators necessários `export const newAction = (state) => ({ type: 'NEW_ACTION', state });`
+- [ ] criar os actionTypes, por exemplo:
+  
+`export const ADD_TO_CART = 'ADD_TO_CART';`
+  
+- [ ] criar os actions creators necessários:
+  
+`export const newAction = (state) => ({ type: 'NEW_ACTION', state });`
 
 *Nos componentes:*
 - [ ] criar a função mapStateToProps
- `const mapStateToProps = state => ({
-    myFirstState: state.myReducer.state});`
+  
+```const mapStateToProps = state => ({
+    myFirstState: state.myReducer.state});```
   
 - [ ] criar a função mapDispatchToProps
- `const mapDispatchToProps = (dispatch) => ({
-    myFirstDispatch: (state) => dispatch(newAction(state))});`
+  
+```const mapDispatchToProps = (dispatch) => ({
+    myFirstDispatch: (state) => dispatch(newAction(state))});```
   
 - [ ] fazer o connect 
-  `export default connect(mapStateToProps, mapDispatchToProps)(Component)`
+```export default connect(mapStateToProps, mapDispatchToProps)(Component)```
   
