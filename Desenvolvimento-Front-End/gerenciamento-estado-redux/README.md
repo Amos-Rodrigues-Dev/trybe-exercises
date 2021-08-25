@@ -44,16 +44,53 @@
 *No arquivo store/index.js:*
 - [ ] importar o rootReducer e criar a store
 - [ ] configurar o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
+ `import { createStore, compose } from 'redux';
+  import rootReducer from '../reducers';
+
+  const extension = window.devToolsExtension() || ((f) => f);
+
+  const store = createStore(rootReducer, compose(extension));
+
+  export default store;`
 
 *Na pasta reducers:*
 - [ ] criar os reducers necessários
+  `const INITIAL_STATE = {
+    state: '',
+    };
+
+    function myReducer(state = INITIAL_STATE, action) {
+      switch (action.type) {
+        case 'NEW_ACTION':
+          return { state: action.state };
+        default:
+          return state;
+      }
+    }
+  
+  export default myReducer;`
+  
 - [ ] configurar os exports do arquivo index.js
+  `import { combineReducers } from 'redux';
+   import myReducer from './myReducer';
+
+   const rootReducer = combineReducers({ myReducer });
+
+   export default rootReducer;`
 
 *Na pasta actions:*
-- [ ] criar os actionTypes, por exemplo: `const ADD_TO_CART = 'ADD_TO_CART';`
-- [ ] criar os actions creators necessários
+- [ ] criar os actionTypes, por exemplo: `export const ADD_TO_CART = 'ADD_TO_CART';`
+- [ ] criar os actions creators necessários `export const newAction = (state) => ({ type: 'NEW_ACTION', state });`
 
 *Nos componentes:*
 - [ ] criar a função mapStateToProps
+ `const mapStateToProps = state => ({
+    myFirstState: state.myReducer.state});`
+  
 - [ ] criar a função mapDispatchToProps
-- [ ] fazer o connect
+ `const mapDispatchToProps = (dispatch) => ({
+    myFirstDispatch: (state) => dispatch(newAction(state))});`
+  
+- [ ] fazer o connect 
+  `export default connect(mapStateToProps, mapDispatchToProps)(Component)`
+  
