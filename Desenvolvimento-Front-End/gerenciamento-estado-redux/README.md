@@ -192,3 +192,14 @@ thunk.withExtraArgument = createThunkMiddleware;
 
 export default thunk;
 ```
+  
+**Sequência das ocorrências**
+  
+1. Pessoa usuária executa a ação na interface, chamando a action
+2. A action dispara seu dispatch
+3. O redux-thunk captura a action, agindo como middleware
+4. O redux-thunk comunica-se com a API, aguardando sua resposta
+5. O redux-thunk envia a resposta para o reducer correto
+6. O reducer pega o estado atual da store e o modifica, de acordo com a action
+7. A store é modificada
+8. A interface é atualizada
