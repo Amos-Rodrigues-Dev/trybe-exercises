@@ -126,3 +126,17 @@ const store = createStore(rootReducer, composeWithDevTools());
 - [ ] fazer o connect 
   
   `export default connect(mapStateToProps, mapDispatchToProps)(Component)`
+
+**Usando o Redux no React - Actions Assíncronas**
+- [ ] npm install redux-thunk
+
+```
+// arquivo onde a redux store é criada
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import reducer from '/path/to/your/root/reducer';
+
+...
+
+const store = createStore(reducer, applyMiddleware(thunk));
+...
