@@ -131,7 +131,6 @@ const store = createStore(rootReducer, composeWithDevTools());
 - [ ] npm install redux-thunk
 
 ```
-```
 // arquivo onde a redux store é criada
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -139,7 +138,9 @@ import reducer from '/path/to/your/root/reducer';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 ```
-  
+
+**Exemplo: **
+```
 export const REQUEST_MOVIES = 'REQUEST_MOVIES';
 export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
 
@@ -163,13 +164,13 @@ export function fetchMovies() {
 }
 
 // componente onde você usaria a action creator fetchMovies assíncrona como uma outra qualquer
-...
+
 class MyConectedAppToRedux extends Component {
-  ...
+
   componentDidMount() {
     const { dispatch, fetchMovies } = this.props;
     dispatch(fetchMovies()); // enviando a action fetchMovies
   }
-  ...
+
 }
 ```
