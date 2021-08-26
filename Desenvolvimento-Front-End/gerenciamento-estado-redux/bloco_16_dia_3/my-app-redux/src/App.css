@@ -24,7 +24,8 @@
 .Login {
   display: flex;
   flex-flow: column;
-  width: 500px;
+  width: 700px;
+  text-align: center;
 }
 
 .Login label {
@@ -46,4 +47,26 @@
   font-size: 20px;
   font-weight: 600;
   align-self: center;
+}
+
+.container-clientes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-top: 2px solid white;
+  margin-bottom: 20px;
+}
+
+.container-clientes .dados {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  text-align: start;
+  line-height: 0;
+}
+
+.container-clientes button {
+  width: 30px;
+  align-self: flex-start;
 }

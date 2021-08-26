@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../components/button';
-import Input from '../components/input';
 import '../App.css'
 import { connect } from 'react-redux';
-import { setValidCliente } from '../redux/actions';
 
 class Clientes extends Component {
   constructor() {
@@ -15,59 +13,80 @@ class Clientes extends Component {
       idade: '',
     }
 
-    this.handleChange = this.handleChange.bind(this);
-    this.onSubmitForm = this.onSubmitForm.bind(this);
+    this.onReturnLogin = this.onReturnLogin.bind(this);
+    this.onCadastro = this.onCadastro.bind(this);
+    this.onClear = this.onClear.bind(this);
   }
 
-  handleChange({ target }) {
-    const { name, value } = target;
-    this.setState({ [name]: value });
-  }
-
-  onSubmitForm() {
-    const { history, setDispatchCliente } = this.props;
-    setDispatchCliente(this.state);
+  onCadastro() {
+    const { history} = this.props;
     history.push('/cadastro');
+    this.setState({})
+  }
+
+  onReturnLogin() {
+    const { history } = this.props;
+    history.push('/login');
+  }
+
+  onClear({ target }) {
+    console.log(target.parentNode.children);
+    // target.parentNode.remove(target.parentNode.childreen)
   }
 
   render() {
-    const { nome, email, idade } = this.state;
+    
+    const { getStateLogin, getStateCliente } = this.props;
+    const { email: emailLogin, senha } = getStateLogin;
+
+    if (emailLogin === '' || senha === '') {
+      return (
+        <div className="Login" >
+          <span>Login não efetuado</span>
+          <Button type="button" label="Retornar" onClick={ this.onReturnLogin } />
+        </div>
+      ); 
+    } 
+
+    if (getStateCliente.length === 0) {
+      return (
+        <div className="Login">
+          <p>Nenhum cliente cadastrado</p>
+        <Button type="button" label="Cadastro de Clientes" onClick={ this.onCadastro } />
+        <Button type="button" label="Retornar" onClick={ this.onReturnLogin } />
+        </div>
+      );
+    }
+
     return (
-      <form>
-        <fieldset className="Login">
-        <Input
-          label="nome: "
-          type="text"
-          onChange={ this.handleChange }
-          value={ nome }
-          name="nome"
-          required
-        />
-        <Input
-          label="email: "
-          type="text"
-          onChange={ this.handleChange }
-          value={ email }
-          name="email"
-          required
-        />
-        <Input
-          label="idade: "
-          type="text"
-          onChange={ this.handleChange }
-          value={ idade }
-          name="idade"
-          required
-        />
-          <Button type="button" label="Cadastro" onClick={ this.onSubmitForm } />
+      <div className="Login">
+        <fieldset>
+          <legend>Clientes</legend>
+          {
+            getStateCliente.map(({ nome, email, idade }) => (
+            <div key={ nome }>
+              <div className="container-clientes" >
+                <div className="dados">
+                  <p>Nome: { nome }</p>
+                  <p>Email: { email }</p>
+                  <p>Idade: { idade }</p>
+                </div>
+                <Button type="button" label="X" onClick={ this.onClear } />  
+              </div>
+            </div>
+          ))
+          }
         </fieldset>
-      </form>
+       <Button type="button" label="Cadastro de Clientes" onClick={ this.onCadastro } />
+       <Button type="button" label="Retornar" onClick={ this.onReturnLogin } />
+      </div>
     );
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  setDispatchCliente: (payload) => dispatch(setValidCliente(payload)),
+const mapStateToProps = (state) => ({
+  getStateLogin: state.reducer.login,
+  getStateCliente: state.reducer.clientes,
 });
 
-export default connect(null, mapDispatchToProps)(Clientes);
+export default connect(mapStateToProps)(Clientes);
