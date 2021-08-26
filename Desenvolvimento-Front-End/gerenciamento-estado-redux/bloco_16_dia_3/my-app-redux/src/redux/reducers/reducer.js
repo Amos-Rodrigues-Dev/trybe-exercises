@@ -5,11 +5,7 @@ const INITIAL_STATE = {
     email: '',
     senha: '',
   },
-  cliente: {
-    nome: '',
-    email: '',
-    idade: '',
-  }
+  clientes: [],
 } 
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -17,7 +13,7 @@ const reducer = (state = INITIAL_STATE, action) => {
     case VALID_EMAIL:
       return { ...state, login: action.payload };
     case VALID_CLIENTE:
-      return { ...state, cliente: action.payload }
+      return {...state, clientes: [...state.clientes, action.payload]};
     default:
       return state;
   }

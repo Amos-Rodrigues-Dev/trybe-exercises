@@ -32,13 +32,13 @@ class Login extends Component {
   }
 
   render() {
-
     const { email, senha } = this.state;
     return (
       <div>
         <form>
           <fieldset className="Login">
             <Input
+              id='email'
               label="email: "
               type="email"
               name="email"
@@ -47,6 +47,8 @@ class Login extends Component {
               required
             />
             <Input
+              suggested="current-password"
+              id="senha"
               label="senha: "
               type="password"
               name="senha"
