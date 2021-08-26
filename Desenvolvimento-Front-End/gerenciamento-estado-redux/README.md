@@ -8,6 +8,16 @@
 - [ ] npx create-react-app my-app-redux;
 - [ ] npm install --save redux react-redux;
 - [ ] npm install.
+- [ ] npm install react-router-dom
+- [ ] npm install --save redux-devtools-extension - 
+```
+import { composeWithDevTools } from 'redux-devtools-extension';
+const store = createStore(rootReducer, composeWithDevTools());
+```
+*Dependências (opcional)
+- [ ] npm i -D prop-types
+- [ ] npm i -D eslint
+- [ ] npm i -D eslint-plugin-sonarjs
 
 *Criar dentro do diretório src:*
 - [ ] diretório actions;
