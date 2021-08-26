@@ -131,6 +131,7 @@ const store = createStore(rootReducer, composeWithDevTools());
 - [ ] npm install redux-thunk
 
 ```
+```
 // arquivo onde a redux store é criada
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -171,4 +172,4 @@ class MyConectedAppToRedux extends Component {
   }
   ...
 }
-...
+```
