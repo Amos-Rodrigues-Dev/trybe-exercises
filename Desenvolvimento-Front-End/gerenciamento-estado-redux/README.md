@@ -14,7 +14,7 @@
 import { composeWithDevTools } from 'redux-devtools-extension';
 const store = createStore(rootReducer, composeWithDevTools());
 ```
-*Dependências (opcional)
+*Dependências (opcional)*
 - [ ] npm i -D prop-types
 - [ ] npm i -D eslint
 - [ ] npm i -D eslint-plugin-sonarjs
