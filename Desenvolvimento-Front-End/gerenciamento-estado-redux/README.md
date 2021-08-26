@@ -139,7 +139,7 @@ import reducer from '/path/to/your/root/reducer';
 const store = createStore(reducer, applyMiddleware(thunk));
 ```
 
-**Exemplo: **
+**Exemplo:**
 ```
 export const REQUEST_MOVIES = 'REQUEST_MOVIES';
 export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
