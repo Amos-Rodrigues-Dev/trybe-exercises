@@ -203,3 +203,32 @@ export default thunk;
 6. O reducer pega o estado atual da store e o modifica, de acordo com a action
 7. A store é modificada
 8. A interface é atualizada
+  
+**Exemplo Fetch**
+  
+```
+const APIURL = 'https://anapioficeandfire.com/api/characters?name='
+
+const charAPI = (char) => (
+  fetch(`${APIURL}${char.split().join('+')}`)
+    .then((response) => (
+      response
+        .json()
+        .then((json) => (response.ok ? Promise.resolve(json) : Promise.reject(json)))
+    ))
+);
+
+export default charAPI;
+```
+```
+export const fetchAPI = () => async (dispatch) => {
+   dispatch(requestAPI());
+   try {
+     const response = await fetch()
+     const data = await response.json()
+     dispatch(getPicture(data));
+   } catch (error) {
+     console.error(error);
+   }
+ };
+```
