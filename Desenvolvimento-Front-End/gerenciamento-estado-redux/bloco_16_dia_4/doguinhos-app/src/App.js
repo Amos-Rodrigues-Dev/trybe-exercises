@@ -10,7 +10,7 @@ function App({ isFetching, src, fetchDog }) {
         <div style={{ width: 500 }}>
           <button
             style={{ display: 'block' }}
-            onClick={fetchDog}
+            onClick={ fetchDog }
             type="button"
           >
             Novo Doguinho
@@ -22,8 +22,8 @@ function App({ isFetching, src, fetchDog }) {
 }
 
 const mapStateToProps = (state) => ({
-  src: state.imagePath,
-  isFetching: state.isFetching});
+  src: state.reducer.imagePath,
+  isFetching: state.reducer.isFetching});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchDog: () => dispatch(fetchDog())});
