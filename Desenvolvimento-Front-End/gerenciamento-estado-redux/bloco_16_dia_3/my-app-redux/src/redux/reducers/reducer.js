@@ -1,4 +1,4 @@
-import { VALID_EMAIL, VALID_CLIENTE } from '../actions';
+import { VALID_EMAIL, VALID_CLIENTE, VALID_REMOVE } from '../actions';
 
 const INITIAL_STATE = {
   login: {
@@ -9,11 +9,14 @@ const INITIAL_STATE = {
 } 
 
 const reducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
+  const { type, payload } = action;
+  switch (type) {
     case VALID_EMAIL:
-      return { ...state, login: action.payload };
+      return { ...state, login: payload };
     case VALID_CLIENTE:
-      return {...state, clientes: [...state.clientes, action.payload]};
+      return {...state, clientes: [...state.clientes, payload]};
+    case VALID_REMOVE:
+      return { ...state, clientes: payload }
     default:
       return state;
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from '../components/button';
 import '../App.css'
 import { connect } from 'react-redux';
+import { setValidRemove } from '../redux/actions';
 
 class Clientes extends Component {
   constructor() {
@@ -29,15 +30,15 @@ class Clientes extends Component {
     history.push('/login');
   }
 
-  onClear({ target }) {
-    console.log(target.parentNode.children);
-    // target.parentNode.remove(target.parentNode.childreen)
+  onClear(isEmail) {
+    const { setValidRemove, clientes } = this.props;
+    setValidRemove(clientes.filter(({ email }) => email !== isEmail))
   }
 
   render() {
     
-    const { getStateLogin, getStateCliente } = this.props;
-    const { email: emailLogin, senha } = getStateLogin;
+    const { login, clientes } = this.props;
+    const { emailLogin, senha } = login;
 
     if (emailLogin === '' || senha === '') {
       return (
@@ -48,7 +49,7 @@ class Clientes extends Component {
       ); 
     } 
 
-    if (getStateCliente.length === 0) {
+    if (clientes.length === 0) {
       return (
         <div className="Login">
           <p>Nenhum cliente cadastrado</p>
@@ -63,18 +64,18 @@ class Clientes extends Component {
         <fieldset>
           <legend>Clientes</legend>
           {
-            getStateCliente.map(({ nome, email, idade }) => (
-            <div key={ nome }>
-              <div className="container-clientes" >
-                <div className="dados">
-                  <p>Nome: { nome }</p>
-                  <p>Email: { email }</p>
-                  <p>Idade: { idade }</p>
+            clientes.map(({ nome, email, idade }) => (
+              <div key={ nome }>
+                <div className="container-clientes" >
+                  <div className="dados">
+                    <p>Nome: { nome }</p>
+                    <p>Email: { email }</p>
+                    <p>Idade: { idade }</p>
+                  </div>
+                  <Button type="button" label="X" onClick={ () => this.onClear(email) } />  
                 </div>
-                <Button type="button" label="X" onClick={ this.onClear } />  
               </div>
-            </div>
-          ))
+            ))
           }
         </fieldset>
        <Button type="button" label="Cadastro de Clientes" onClick={ this.onCadastro } />
@@ -84,9 +85,13 @@ class Clientes extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  getStateLogin: state.reducer.login,
-  getStateCliente: state.reducer.clientes,
+const mapStateToProps = ({ reducer: { login, clientes}}) => ({
+  login,
+  clientes,
 });
 
-export default connect(mapStateToProps)(Clientes);
+const mapDispatchProps = (dispatch) => ({
+  setValidRemove: (state) => dispatch(setValidRemove(state)),
+});
+
+export default connect(mapStateToProps, mapDispatchProps)(Clientes);
