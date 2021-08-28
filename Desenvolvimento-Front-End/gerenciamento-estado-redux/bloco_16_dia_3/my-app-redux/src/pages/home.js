@@ -6,6 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <h2>Cadastro de Clientes</h2>
         <Link className="App-link" to="/Login" >LOGIN</Link>
       </div>
     );

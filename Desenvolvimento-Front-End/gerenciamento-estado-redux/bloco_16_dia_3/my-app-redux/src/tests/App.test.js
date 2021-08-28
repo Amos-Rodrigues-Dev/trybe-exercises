@@ -1,9 +1,17 @@
+import React from 'react';
+import App from '../App';
+import renderWithRouterAndRedux from "./helpers/renderWithRouterAndRedux";
+import { screen } from '@testing-library/react';
 
+describe('Catastro de Clientes', () => {
 
-describe('', () => {
+  it('verifica se a tela inicial é renderizada corretamente', () => {
+    renderWithRouterAndRedux(<App />);
 
-  it('', () => {
+    expect(
+      screen.getByText(/cadastro de clientes/i),
+    ).toBeInTheDocument();
+
 
   });
 });
-
