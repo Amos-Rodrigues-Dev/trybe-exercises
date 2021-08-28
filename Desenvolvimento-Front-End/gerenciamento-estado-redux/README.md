@@ -274,7 +274,7 @@ const renderWithRedux = (
   component,
   { initialState = {}, store = createStore(rootReducer, initialState)} = {}
   ) => ({
-    ...render(<Provider store={ store }>{ component }</Provider>)
+    ...render(<Provider store={ store }>{ component }</Provider>), store,
   });
 
 export default renderWithRedux;
