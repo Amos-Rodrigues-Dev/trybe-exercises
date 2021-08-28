@@ -48,6 +48,7 @@ class Cadastro extends Component {
       <fieldset className="Login">
         <legend>Cadastrar Clientes</legend>
         <Input
+          dataTestid="input-register-nome"
           label="nome: "
           type="text"
           onChange={ this.handleChange }
@@ -56,6 +57,7 @@ class Cadastro extends Component {
           required
         />
         <Input
+          dataTestid="input-register-email"
           label="email: "
           type="text"
           onChange={ this.handleChange }
@@ -64,6 +66,7 @@ class Cadastro extends Component {
           required
         />
         <Input
+          dataTestid="input-register-idade"
           label="idade: "
           type="text"
           onChange={ this.handleChange }

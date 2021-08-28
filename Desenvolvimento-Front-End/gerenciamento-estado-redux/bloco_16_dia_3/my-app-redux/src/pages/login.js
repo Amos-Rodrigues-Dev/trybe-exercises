@@ -39,6 +39,7 @@ class Login extends Component {
           <fieldset className="Login">
             <Input
               id='email'
+              dataTestid="input-email"
               label="email: "
               type="email"
               name="email"
@@ -47,7 +48,7 @@ class Login extends Component {
               required
             />
             <Input
-              suggested="current-password"
+              dataTestid="input-password"
               id="senha"
               label="senha: "
               type="password"
@@ -56,7 +57,7 @@ class Login extends Component {
               onChange={ this.handleChange }
               required
             />
-            <Button type="button" label="Login" onClick={ this.onSubmitForm } />
+            <Button dataTestid="btn-login" type="button" label="Login" onClick={ this.onSubmitForm } />
           </fieldset>
         </form>
       </div>
