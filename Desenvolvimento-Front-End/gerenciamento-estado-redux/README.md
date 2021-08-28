@@ -266,13 +266,13 @@ export default renderWithRouter;
 ```
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import rootReducer from "../../redux/reducers";
-
+import thunk from 'redux-thunk';
 
 const renderWithRedux = ( 
   component,
-  { initialState = {}, store = createStore(rootReducer, initialState)} = {}
+  { initialState = {}, store = createStore(rootReducer, initialState, applyMiddleware(thunk))} = {}
   ) => ({
     ...render(<Provider store={ store }>{ component }</Provider>), store,
   });
@@ -289,8 +289,9 @@ import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import rootReducers from '../../reducers';
+import thunk from 'redux-thunk';
 
 const renderWithRouterAndRedux = (
   component, // componente a ser renderizado
@@ -300,7 +301,7 @@ const renderWithRouterAndRedux = (
 
     // caso você passe uma store por parâmetro ela será utilizada
     // caso contrário vai chamar a função createStore e criar uma nova
-    store = createStore(rootReducers, initialState),
+    store = createStore(rootReducers, initialState, applyMiddleware(thunk)),
 
     // rota inicial da nossa aplicação
     initialEntries = ['/'],
