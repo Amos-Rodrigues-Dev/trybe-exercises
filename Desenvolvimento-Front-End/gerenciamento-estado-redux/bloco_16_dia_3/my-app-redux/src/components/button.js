@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
   render() {
-    const { label, onClick } = this.props;
+    const { label, onClick, dataTestid } = this.props;
     return (
-      <button type="button" onClick={ onClick }>
+      <button data-testid={ dataTestid } type="button" onClick={ onClick }>
         { label }
       </button>
     );
