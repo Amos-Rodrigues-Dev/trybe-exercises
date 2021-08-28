@@ -231,4 +231,53 @@ export const fetchAPI = () => async (dispatch) => {
      console.error(error);
    }
  };
+  
+// export function thunkCharacter(name) {
+//   return (dispatch) => {
+//     dispatch(searchBegin(name));
+//     return charAPI(name)
+//       .then(
+//         (character) => dispatch(searchSuccess(character)),
+//         (error) => dispatch(searchFailure(error.message)),
+//       );
+//   };
+// };
 ```
+  
+**Relembrando RTL com Rdux**
+
+- [ ] renderWithRouter
+```
+import React from 'react';
+import { render } from "@testing-library/react";
+import { Router } from "express";
+import { createMemoryHistory } from "history";
+
+const renderWithRouter = (component, initialEntries = ['/cadastro']) => {
+  const history = createMemoryHistory({ initialEntries });
+  return ({
+    ...render(<Router history={ history }>{ component }</Router>), history,
+  })
+};
+
+export default renderWithRouter;
+```
+- [ ] renderWithRedux
+```
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import rootReducer from "../../redux/reducers";
+
+
+const renderWithRedux = ( 
+  component,
+  { initialState = {}, store = createStore(rootReducer, initialState)} = {}
+  ) => ({
+    ...render(<Provider store={ store }>{ component }</Provider>)
+  });
+
+export default renderWithRedux;
+```
+
+ 
