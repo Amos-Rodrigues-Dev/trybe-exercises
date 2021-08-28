@@ -333,4 +333,17 @@ const renderWithRouterAndRedux = (
 
 export default renderWithRouterAndRedux;
 ```
- 
+- [ ] Com Utilização do Thunk 
+```
+const createMockStore = (initialState) => (
+  createStore(combineReducers({ reducer }), initialState, applyMiddleware(thunk))
+);
+
+const renderWithRedux = (
+  component, { initialState, store = createMockStore(initialState) } = {},
+) => ({
+  ...render(<Provider store={ store }>{component}</Provider>),
+  store});
+
+export default renderWithRedux;
+```
