@@ -132,7 +132,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 17: Projeto React
 
-- [ ] 17-1: _[Projeto - Jogo de Trivia]()_
+- [x] 17-1: _[Projeto - Jogo de Trivia](https://github.com/Amos-Rodrigues-Dev/trivia-react-redux)_
 
 ##### Bloco 18: React & Context API
 
