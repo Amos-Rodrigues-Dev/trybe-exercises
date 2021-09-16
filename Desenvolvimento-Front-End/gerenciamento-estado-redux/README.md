@@ -17,6 +17,8 @@ const store = createStore(rootReducer, composeWithDevTools());
 - [ ] npm i -D prop-types
 - [ ] npm i -D eslint
 - [ ] npm i -D eslint-plugin-sonarjs
+- [ ] npm i -D stylelint
+- [ ] npm i -D stylelint-config-standard
 
 *Criar dentro do diretório src:*
 - [ ] diretório actions;
