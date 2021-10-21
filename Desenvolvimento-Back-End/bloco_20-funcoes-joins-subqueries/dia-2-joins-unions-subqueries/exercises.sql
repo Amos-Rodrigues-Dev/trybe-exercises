@@ -96,3 +96,22 @@ INNER JOIN Pixar.BoxOffice box
 ON mov.id = box.movie_id
 WHERE mov.`year` > 2009;
 
+-- Exercício 8: Utilizando o EXISTS , selecione o nome e localização dos cinemas que possuem filmes em cartaz.
+SELECT
+	cine.`name`,
+    cine.location
+FROM Pixar.Theater cine
+WHERE EXISTS (
+	SELECT * FROM Pixar.Movies
+    WHERE theater_id = cine.id
+);
+
+-- Exercício 9: Utilizando o EXISTS , selecione o nome e localização dos cinemas que não possuem filmes em cartaz.
+SELECT
+	cine.`name`,
+    cine.location
+FROM Pixar.Theater cine
+WHERE NOT EXISTS (
+	SELECT * FROM Pixar.Movies
+    WHERE theater_id = cine.id
+);
