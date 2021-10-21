@@ -130,44 +130,45 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 16-5: _Testes em React-Redux_
 - [x] 16-6: _[Projeto - Trybe Wallet](https://github.com/Amos-Rodrigues-Dev/trybewallet)_
 
-##### Bloco 17: Projeto React
+##### Bloco 16: Projeto React
 
-- [x] 17-1: _[Projeto - Jogo de Trivia](https://github.com/Amos-Rodrigues-Dev/trivia-react-redux)_
+- [x] 16-7: _[Projeto - Jogo de Trivia](https://github.com/Amos-Rodrigues-Dev/trivia-react-redux)_
 
-##### Bloco 18: React & Context API
+##### Bloco 17: React & Context API
 
-- [x] 18-1: _Context API do React_
-- [x] 18-2: _React Hooks - useState e useContext_
-- [x] 18-3: _React Hooks - useEffect e Hooks customizados_
-- [x] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks](https://github.com/Amos-Rodrigues-Dev/starwars-planets-search)_
+- [x] 17-1: _Context API do React_
+- [x] 17-2: _React Hooks - useState e useContext_
+- [x] 17-3: _React Hooks - useEffect e Hooks customizados_
+- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks](https://github.com/Amos-Rodrigues-Dev/starwars-planets-search)_
 
-##### Bloco 19: Projeto Final de Front-end
+##### Bloco 18: Projeto Final de Front-end
 
-- [X] 19-1: _[Projeto - App de Receitas](https://github.com/Amos-Rodrigues-Dev/project-recipes-app)_
+- [X] 18-1: _[Projeto - App de Receitas](https://github.com/Amos-Rodrigues-Dev/project-recipes-app)_
+
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
-##### Bloco 20: Introdução - Bancos de dados relacionais
+##### Bloco 19: Introdução - Bancos de dados relacionais
 
-- [ ] 20-1: _Banco de dados SQL_
-- [ ] 20-2: _Encontrando dados em um banco de dados_
-- [ ] 20-3: _Filtrando dados de forma específica_
-- [ ] 20-4: _Manipulando tabelas_
-- [ ] 20-5: _[Projeto - All For One]()_
+- [X] 19-1: _Banco de dados SQL_
+- [X] 19-2: _Encontrando dados em um banco de dados_
+- [X] 19-3: _Filtrando dados de forma específica_
+- [X] 19-4: _Manipulando tabelas_
+- [X] 19-5: _[Projeto - All For One]()_
+
+##### Bloco 20: Bancos de dados relacionais
+
+- [ ] 20-1: _Funções mais usadas no SQL_
+- [ ] 20-2: _Descomplicando JOINs e UNIONs_
+- [ ] 20-3: _Stored Routines & Subqueries_
+- [ ] 20-4: _[Projeto - Vocabulary Booster]()_
 
 ##### Bloco 21: Bancos de dados relacionais
 
-- [ ] 21-1: _Funções mais usadas no SQL_
-- [ ] 21-2: _Descomplicando JOINs e UNIONs_
-- [ ] 21-3: _Stored Routines & Subqueries_
-- [ ] 21-4: _[Projeto - Vocabulary Booster]()_
-
-##### Bloco 22: Bancos de dados relacionais
-
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 22-2: _Normalização, Formas Normais e Dumps_
-- [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 22-3: _[Projeto - One For All]()_
+- [ ] 21-1: _Transformando ideias em um modelo de banco de dados_
+- [ ] 21-2: _Normalização, Formas Normais e Dumps_
+- [ ] 21-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
+- [ ] 21-3: _[Projeto - One For All]()_
 
 ##### Bloco 23: Introdução - NoSQL
 
