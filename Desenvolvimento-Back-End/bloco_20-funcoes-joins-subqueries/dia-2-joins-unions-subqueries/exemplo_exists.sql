@@ -44,12 +44,18 @@ SELECT * FROM hotel.Cars;
 SELECT * FROM hotel.Customers;
 SELECT * FROM hotel.CarSales;
 
-SELECT
-	cu.`Name`, car.`Name` 
-FROM hotel.Customers cu
+SELECT 
+    cus.name, car.name
+FROM
+    hotel.Cars AS car
+        INNER JOIN
+    hotel.Customers AS cus
+WHERE
+    EXISTS( SELECT 
+            *
+        FROM
+            hotel.CarSales
+        WHERE
+            CustomerID = cus.CustomerId
+                AND carID = car.ID);
 
-INNER JOIN hotel.CarSales cas
-ON cu.CustomerId = cas.CustomerId
-
-INNER JOIN hotel.Cars car
-ON car.Id = cas.CarId; 
