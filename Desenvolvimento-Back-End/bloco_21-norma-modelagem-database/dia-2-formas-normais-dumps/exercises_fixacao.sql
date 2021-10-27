@@ -48,6 +48,11 @@ SELECT
     f.email,
     f.telefone,
     DATE_FORMAT(f.datacadastro, '%d/%m/%Y') AS data_cadastro,
-    s.nome_setor
+    s.nome_setor,
+    IF(f.ativo = 1, 'Ativo', 'Inativo') AS `status`
 FROM Funcionarios f 
 INNER JOIN Setores s ON s.setor_id = f.setor_id;
+
+UPDATE Funcionarios
+SET ativo = 0
+WHERE funcionario_id = 3;
