@@ -2,6 +2,8 @@
 -- CREATE [INDEX | FULLTEXT INDEX | UNIQUE INDEX] nome_indice
 -- ON tabela (coluna);
 
+-- ALTER TABLE `table` ADD INDEX `product_id_index` (`product_id`)
+
 -- Criando um índice composto, em duas ou mais colunas
 -- CREATE [INDEX | FULLTEXT INDEX | UNIQUE INDEX] nome_indice
 -- ON tabela (coluna1, coluna2);
