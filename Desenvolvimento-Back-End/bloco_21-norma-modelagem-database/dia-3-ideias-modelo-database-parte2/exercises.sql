@@ -72,6 +72,8 @@ WHERE name LIKE '%action%'; -- 1.85
 
 -- 2. Verifique o impacto de um INDEX na tabela address (banco de dados sakila ) adicionando-o na coluna postal_code . Após ter adicionado o índice, mensure o custo da query utilizando o execution plan, como já foi feito em lições anteriores. Após ter criado e mensurado o custo da query, exclua o índice e mensure novamente esse custo.
 CREATE INDEX index_postal_code ON sakila.address(postal_code);
+ALTER TABLE sakila.address ADD INDEX index_postal_code(postal_code);
+
 SHOW INDEX FROM sakila.address;
 -- Mensure o custo com a seguinte query:
 SELECT *
