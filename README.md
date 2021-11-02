@@ -154,21 +154,28 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 19-2: _Encontrando dados em um banco de dados_
 - [X] 19-3: _Filtrando dados de forma específica_
 - [X] 19-4: _Manipulando tabelas_
-- [X] 19-5: _[Projeto - All For One]()_
+- [X] 19-5: _[Projeto - All For One](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/mysql-all-for-one)_
 
 ##### Bloco 20: Bancos de dados relacionais
 
-- [ ] 20-1: _Funções mais usadas no SQL_
-- [ ] 20-2: _Descomplicando JOINs e UNIONs_
-- [ ] 20-3: _Stored Routines & Subqueries_
-- [ ] 20-4: _[Projeto - Vocabulary Booster]()_
+- [X] 20-1: _Funções mais usadas no SQL_
+- [X] 20-2: _Descomplicando JOINs e UNIONs_
+- [X] 20-3: _Stored Routines & Subqueries_
+- [X] 20-4: _[Projeto - Vocabulary Booster](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/mysql-vocabulary-booster)_
 
 ##### Bloco 21: Bancos de dados relacionais
 
-- [ ] 21-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 21-2: _Normalização, Formas Normais e Dumps_
-- [ ] 21-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 21-3: _[Projeto - One For All]()_
+- [X] 21-1: _Transformando ideias em um modelo de banco de dados_
+- [X] 21-2: _Normalização, Formas Normais e Dumps_
+- [X] 21-3: _Transformando ideias em um modelo de banco de dados - Parte 2_
+- [X] 21-4: _[Projeto - One For All](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/mysql-one-for-all)_
+
+##### Bloco 22: Docker: Utilizando Containers
+
+- [ ] 22-1: _Utilizando Containers - Docker_
+- [ ] 22-2: _Manipulação e Criação de Imagens no Docker
+- [ ] 22-3: _Orquestrando Containers com Docker Compose
+- [ ] 22-4: _[Projeto - Docker Todo-List]()_
 
 ##### Bloco 23: Introdução - NoSQL
 
