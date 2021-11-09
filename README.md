@@ -172,10 +172,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 22: Docker: Utilizando Containers
 
-- [ ] 22-1: _Utilizando Containers - Docker_
-- [ ] 22-2: _Manipulação e Criação de Imagens no Docker
-- [ ] 22-3: _Orquestrando Containers com Docker Compose
-- [ ] 22-4: _[Projeto - Docker Todo-List]()_
+- [X] 22-1: _Utilizando Containers - Docker_
+- [X] 22-2: _Manipulação e Criação de Imagens no Docker
+- [X] 22-3: _Orquestrando Containers com Docker Compose
+- [X] 22-4: _[Projeto - Docker Todo-List](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/docker-todo-list)_
 
 ##### Bloco 23: Introdução - NoSQL
 
