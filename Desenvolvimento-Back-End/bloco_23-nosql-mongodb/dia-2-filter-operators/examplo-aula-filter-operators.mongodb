@@ -1,0 +1,6 @@
+use("aula-filter-operators");
+db.filmes.find().count()
+
+use("aula-filter-operators");
+db.dropDatabase();
+
