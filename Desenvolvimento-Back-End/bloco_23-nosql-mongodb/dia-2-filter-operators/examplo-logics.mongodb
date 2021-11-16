@@ -29,7 +29,8 @@ db.restaurants.find({
 use("business");
 db.restaurants.find({
   $and: [
-    { $or: [{ rating: { $gt: 6 } }, { rating: { $lt: 10 } }] }, //Verifcar situação implícita da vírgula
+    // { $or: [{ rating: { $gt: 6 } }, { rating: { $lt: 10 } }] }, //Verifcar situação implícita da vírgula
+    { $or: [{ rating: { $gt: 6, $lt: 10 } }] },
     { $or: [
       { borough: { $eq: "Brooklyn" } },
       { cuisine: { $eq: "Delicatessen" }}] }
