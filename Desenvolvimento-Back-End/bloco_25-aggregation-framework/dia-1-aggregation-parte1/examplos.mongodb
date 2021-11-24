@@ -1,0 +1,150 @@
+// Operador $match
+db.articles.insertMany([
+{ _id: ObjectId("512bc95fe835e68f199c8686"), author: "dave", score: 80, views: 100 },
+{ _id: ObjectId("512bc962e835e68f199c8687"), author: "dave", score: 85, views: 521 },
+{ _id: ObjectId("55f5a192d4bede9ac365b257"), author: "ahn", score: 60, views: 1000 },
+{ _id: ObjectId("55f5a192d4bede9ac365b258"), author: "li", score: 55, views: 5000 },
+{ _id: ObjectId("55f5a1d3d4bede9ac365b259"), author: "annT", score: 60, views: 50 },
+{ _id: ObjectId("55f5a1d3d4bede9ac365b25a"), author: "li", score: 94, views: 999 },
+{ _id: ObjectId("55f5a1d3d4bede9ac365b25b"), author: "ty", score: 95, views: 1000 }
+]);
+
+// Exemplo 1: Igualdade simples
+db.articles.aggregate(
+  [{ $match: { author: "dave" } }]
+);
+
+// Exemplo 2: Igualdade complexa
+db.articles.aggregate(
+  [
+    {
+      $match: {
+        $or: [
+          { score: { $gt: 70, $lt: 90 } },
+          { views: { $gte: 1000 } }
+        ]
+      }
+    }
+  ]
+);
+
+// Operador $limit
+db.articles.aggregate(
+  [
+    { $limit : 5 }
+  ]
+);
+
+// Para Fixar
+// Antes de começar, crie um banco de dados chamado agg_example e rode a query abaixo para os exercícios.
+// use agg_example;
+db.transactions.insertMany([
+  { value: 5900, from: "Dave America", to: "Ned Flanders", bank: 'International' },
+  { value: 1000, from: "Mark Zuck", to: "Edna Krabappel", bank: 'FloridaBank' },
+  { value: 209, from: "Lisa Simpson", to: "Dave America", bank: 'bankOfAmerica' },
+  { value: 10800, from: "Arnold Schuz", to: "Mark Zuck", bank: 'JPMorgan' },
+  { value: 850, from: "Barney Gumble", to: "Lisa Simpson", bank: 'Citigroup' },
+  { value: 76000, from: "Ned Flanders", to: "Edna Krabappel", bank: 'JPMorgan' },
+  { value: 1280, from: "Dave America", to: "Homer Simpson", bank: 'Citigroup' },
+  { value: 7000, from: "Arnold Schuz", to: "Ned Flanders", bank: 'International' },
+  { value: 59020, from: "Homer Simpson", to: "Lisa Simpson", bank: 'International' },
+  { value: 100, from: "Mark Zuck", to: "Barney Gumble", bank: 'FloridaBank' },
+]);
+
+// 1. Selecione todas as transações feitas pelo cliente chamado "Dave America".
+db.transactions.aggregate(
+  [{ $match: { from: "Dave America" } }]
+);
+
+// 2. Selecione todas as transações com o valor entre 700 e 6000, ou que sejam recebidas pela cliente "Lisa Simpson".
+db.transactions.aggregate(
+  [
+    {
+      $match: {
+        $or: [
+          { value: { $gte: 700, $lte: 6000 } },
+          { to: { $eq: "Lisa Simpson" } }
+        ]
+      }
+    }
+  ]
+);
+
+// 3. Selecione três transações com o valor acima de 1000.
+db.transactions.aggregate(
+  [
+    { $match: { value: { $gt: 1000 } } }, { $limit: 3 }
+  ]
+);
+
+
+// Operador $project
+db.books.insertOne(
+  {
+    _id: 1,
+    title: "A Fundação",
+    isbn: "0001122223334",
+    author: { last: "Asimov", first: "Isaac" },
+    copies: 5
+  }
+)
+
+// Exemplo 1: Incluindo campos específicos
+db.books.aggregate(
+  [
+    {
+      $project : {
+        title : 1,
+        author : 1
+      }
+    }
+  ]
+);
+
+// Exemplo 2: Excluindo o campo _id
+db.books.aggregate([
+  {
+    $project : {
+      _id: 0,
+      title : 1,
+      author : 1
+    }
+  }
+]);
+
+// Exemplo 3: Excluindo outros campos
+db.books.aggregate([
+  {
+    $project : {
+      copies: 0
+    }
+  }
+]);
+
+// Exemplo 4: Excluindo campos em subdocumentos
+db.books.aggregate([
+  {
+    $project : {
+      "author.first": 0,
+      copies: 0
+    }
+  }
+]);
+
+// Exemplo 5: Incluindo campos calculados
+db.books.aggregate([
+  {
+    $project: {
+      title: 1,
+      isbn: {
+        prefix: { $substr: ["$isbn", 0, 3] },
+        group: { $substr: ["$isbn", 3, 2] },
+        publisher: { $substr: ["$isbn", 5, 4] },
+        title: { $substr: ["$isbn", 9, 3] },
+        checkDigit: { $substr: ["$isbn", 12, 1] }
+      },
+      lastName: "$author.last",
+      copiesSold: "$copies"
+    }
+  }
+]);
