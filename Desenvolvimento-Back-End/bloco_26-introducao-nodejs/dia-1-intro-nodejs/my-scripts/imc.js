@@ -1,14 +1,14 @@
 // Crie um script para calcular o Índice de Massa Corporal(IMC) de uma pessoa.
 const readline = require('readline-sync');
 
-const altura = readline.question('Qual sua altura? ');
+const altura = readline.questionFloat('Qual sua altura? ');
 const peso = readline.questionFloat('Qual seu peso? ');
 
 const calculaIMC = (altura, peso) => {
 
   console.log(`Peso: ${peso}, Altura: ${altura}`);
-  // const imc = (peso / Math.pow(altura, 2)).toFixed(2); em metros 
-  const imc = (peso / Math.pow(altura / 100, 2)).toFixed(2);
+  const imc = (peso / Math.pow(altura, 2)).toFixed(2);
+  // const imc = (peso / Math.pow(altura / 100, 2)).toFixed(2);
 
   console.log(`IMC: ${imc}`);
 
