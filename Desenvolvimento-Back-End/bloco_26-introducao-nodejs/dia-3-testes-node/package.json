@@ -1,8 +1,11 @@
 {
-  "name": "io-test",
+  "name": "dia-3-testes-node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
   "scripts": {
     "test": "mocha tests",
     "start": "node index.js"

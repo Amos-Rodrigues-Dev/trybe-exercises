@@ -10,6 +10,7 @@ describe('leArquivo', () => {
   describe('Quando o arquivo existe', () => {
     before(() => {
       sinon.stub(fs, 'readFileSync').returns(CONTEUDO_DO_ARQUIVO);
+      // sinon.stub(fs, 'readFile').resolves(CONTEUDO_DO_ARQUIVO);
     });
 
     after(() => {
@@ -34,6 +35,7 @@ describe('leArquivo', () => {
       sinon
         .stub(fs, 'readFileSync')
         .throws(new Error('Arquivo não encontrado'));
+        // sinon.stub(fs, 'readFile').rejects(CONTEUDO_DO_ARQUIVO);
     });
 
     after(() => {
