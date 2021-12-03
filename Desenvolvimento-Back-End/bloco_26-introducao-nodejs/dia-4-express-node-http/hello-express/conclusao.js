@@ -65,7 +65,7 @@ app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
 });
 
-
+// ==================================================================================== // =============================================================== //
 // Nodemon
 // npm i nodemon -D
 //...
@@ -76,3 +76,20 @@ app.listen(3001, () => {
 // ...
 
 // npm run dev
+
+// ==================================================================================== // =============================================================== //
+// const cors = require('cors'); // libera o acesso da nossa API para outras aplicações - npm i cors
+
+// app.use(cors()); // integração entre front-end e back-end é necessário fazer esse ajuste no código da API.
+
+// ==================================================================================== // =============================================================== //
+// Para testar nossa aplicação, podemos fazer uma requisição usando o próprio navegador, colocando a URL http://localhost:3001/recipes .
+// Porém como nem todo tipo de requisição HTTP pode ser feita diretamente pelo navegador, é recomendado utilizar algum cliente HTTP. 
+// Os mais famosos são o Postman e o Insomnia .
+// Existe uma terceira possibilidade: 
+
+// snap install httpie
+// snap refresh httpie
+
+//Example:
+// http POST :3001/recipes id:=4 name='Macarrão com Frango' price:=30 waitTime:=45// execute apenas essa linha!
