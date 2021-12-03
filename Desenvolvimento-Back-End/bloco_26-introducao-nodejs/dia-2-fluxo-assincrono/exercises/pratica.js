@@ -124,4 +124,195 @@ function replaceNelson () {
       fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsWithMaggie)));
 }
 
-// Exercise 5 -
+// Exercise 5 - Crie uma função que lê e escreve vários arquivos ao mesmo tempo.
+
+// const fs = require('fs').promises; // Importar o módulo fs e criar a função com o Array de strings
+
+async function arrayToFile() {
+  const strings = ['Finalmente', 'estou', 'usando', 'Promise.all', '!!!'];
+
+  const createFilePromises = strings.map((string, index) => //Utilizar a função map para criar um Array de Promises, cada um criando um arquivo
+    fs.writeFile(`./file${index + 1}.txt`, string)
+  );
+
+  await Promise.all(createFilePromises); // Utilizar Promise.all para aguardar a escrita de todos os arquivos
+
+  const fileNames = [
+    'file1.txt',
+    'file2.txt',
+    'file3.txt',
+    'file4.txt',
+    'file5.txt',
+  ];
+
+  const fileContents = await Promise.all(
+    fileNames.map((fileName) => fs.readFile(fileName, 'utf-8')) // Realizar a leitura dos arquivos criados
+  );
+
+  const newFileContent = fileContents.join(' '); // Concatenar o conteúdo dos arquivos e criar o arquivo novo
+
+  await fs.writeFile('./fileAll.txt', newFileContent);
+};
+
+// arrayToFile();
+
+// Exercício 6 - Crie um script que mostre na tela o conteúdo de um arquivo escolhido pelo usuário:
+
+// Para os exercícios abaixo, faremos uso de um módulo chamado readline , principalmente de seu método readline.question() . https://nodejs.org/api/readline.html
+// Ele provê uma interface de leitura de dados inserida no terminal. Para mais informações, consulte a documentação .
+
+// Pergunte à pessoa usuária qual arquivo ela deseja ler.
+// Leia o arquivo indicado.
+// Caso o arquivo não exista, exiba na tela "Arquivo inexistente" e encerre a execução do script.
+// Caso o arquivo exista, escreva seu conteúdo na tela.
+
+// Importamos os módulos que vamos utilizar: fs/promises e readline
+// const fs = require('fs').promises;
+const readline = require('readline');
+
+// Para facilitar a solicitação de input, criamos uma função que utiliza o readline.question , mas retorna uma Promise
+function question(message) {
+  // Criamos uma variável rl para inicializar
+  // o módulo readline, conforme visto na documentação
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  return new Promise((resolve) => {
+    // No entanto, ao abrirmos a pergunta,
+    // fazemos isso dentro de uma Promise.
+    rl.question(message, (answer) => {
+      rl.close();
+
+      // Dessa forma, quando obtivermos a resposta,
+      // podemos resolver nossa Promise com essa resposta.
+      // Assim, quem chama nossa função não precisa
+      // se preocupar com callbacks, e pode obter a resposta
+      // através da Promise que retornamos.
+      resolve(answer);
+    });
+  });
+}
+
+// Criamos a função que será responsável pelo fluxo todo. Vamos chamá-la de start :
+async function start() {
+  // Como nossa função `question` retorna uma Promise,
+  // podemos utilzar `await` para obter a resposta.
+  const fileName = await question('Digite o caminho do arquivo que deseja ler: ');
+
+  try {
+    // Tentamos realizar a leitura do arquivo
+    const fileContent = await readFile(fileName, 'utf-8');
+    // E exibir seu resultado na tela
+    console.log(fileContent);
+  } catch (err) {
+    // Caso um erro aconteça, exibimos a mensagem de erro na tela.
+    console.log('Arquivo inexistente');
+  }
+}
+
+// start();
+
+// Exercício 7 - Crie um script que substitua uma palavra por outra em um arquivo escolhido pela pessoa usuária:
+// Pergunte à pessoa usuária qual arquivo deseja utilizar.
+// Leia o arquivo.
+// Caso o arquivo não exista, exiba um erro na tela e encerre a execução do script.
+// Caso o arquivo exista, solicite a palavra a ser substituída.
+// Solicite a nova palavra, que substituirá a palavra anterior.
+// Imprima na tela o conteúdo do arquivo com as palavras já substituídas.
+// Pergunte o nome do arquivo de destino.
+// Salve o novo arquivo no caminho de destino.
+// Dica: Utilize a classe RegExp do JS para substituir todas as ocorrências da palavra com replace(new RegExp(palavra, 'g'), novaPalavra) .
+
+// Como no exercício anterior, começamos importando os módulos necessários e criando a função question .
+// const fs = require('fs').promises;
+// const readline = require('readline');
+
+function question(message) {
+  // Criamos uma variável rl para inicializar
+  // o módulo readline, conforme visto na documentação
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  return new Promise((resolve) => {
+    // No entanto, ao abrirmos a pergunta,
+    // fazemos isso dentro de uma Promise.
+    rl.question(message, (answer) => {
+      rl.close();
+
+      // Dessa forma, quando obtivermos a resposta,
+      // podemos resolver nossa Promise com essa resposta.
+      // Assim, quem chama nossa função não precisa
+      // se preocupar com callbacks, e pode obter a resposta
+      // através da Promise que retornamos.
+      resolve(answer);
+    });
+  });
+}
+
+// Criamos a função start , responsável pelo fluxo, e perguntamos o nome do arquivo a ser lido
+async function start() {
+  const fileName = await question('Arquivo a ser lido: ');
+
+  // Realizamos a leitura do arquivo, utilizando um catch para tratar erros.
+  const originalContent = await fs.readFile(fileName, 'utf-8')
+  // Caso aconteça um erro ao ler o arquivo
+  .catch(err => {
+    // Mostramos o erro na tela
+    console.error(`Erro ao ler o arquivo: ${err}`);
+    // E retornamos `false`.
+    // O valor retornado aqui do catch é o valor que será armazenado
+    // na variável `originalContent`.
+    return false;
+  })
+
+  // Se `originalContent` estiver vazia ou contiver um valor falso,
+  // quer dizer que ocorreu um erro na leitura do arquivo e não devemos prosseguir.
+  // Utilizamos o `return` para encerrar a execução
+  if (!originalContent) return;
+
+  // Perguntamos quais palavras deverão ser substituídas, realizamos a substituição e exibimos o resultado na tela
+  const oldWord = await question('Qual palavra deseja substituir? ');
+  const newWord = await question('E qual palavra deve ficar em seu lugar? ');
+
+  const newContent = originalContent.replace(new RegExp(oldWord, 'g'), newWord);
+
+  console.log('Resultado da substituição: ');
+  console.log(newContent);
+
+}
+
+// start();
+
+// Exercício 8
+// Escreva uma função que receba um número inteiro maior que 0 e retorne uma Promise.
+// Se o número for múltiplo de 3, resolva a Promise com o valor "Fizz".
+// Se o número for múltiplo de 5, resolva a Promise com o valor "Buzz".
+// Se o número for múltiplo de 3 e 5, resolva a Promise com o valor "FizzBuzz".
+// Caso contrário, rejeite a Promise com o valor do número.
+
+function fizzBuzz(number) {
+  return new Promise((resolve, reject) => {
+    if (number % 3 === 0 && number % 5 === 0) {
+      return resolve('FizzBuzz');
+    }
+
+    if (number % 3 === 0) {
+      return resolve('Fizz');
+    }
+
+    if (number % 5 === 0) {
+      return resolve('Buzz');
+    }
+
+    reject(number);
+  });
+}
+
+fizzBuzz(1).catch(console.error);
+fizzBuzz(3).then(console.log);
+fizzBuzz(5).then(console.log);
+fizzBuzz(15).then(console.log);
