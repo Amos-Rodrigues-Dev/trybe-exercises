@@ -15,7 +15,7 @@ const app = express();
 // });
 
 app.get(
-  '/:fileName', 
+  '/:fileName',
   rescue( async (req, res, next) => {
     const file = await fs.readFile(`./${req.params.fileName}`);
     res.send(file.toString('utf-8'));
