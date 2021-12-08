@@ -198,10 +198,12 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 26: Intro - NodeJS
 
-- [ ] 26-1: _NodeJS - Introdução_
-- [ ] 26-2: _NodeJS - Fluxo Assíncrono_
-- [ ] 26-3: _NodeJS - Arquitetura_
-- [ ] 26-4: _[Projeto - A CLI of Ice and Fire]()_
+- [X] 26-1: _NodeJS - Introdução_
+- [X] 26-2: _NodeJS - Fluxo Assíncrono_
+- [X] 26-3: _Testes com NodeJS_
+- [X] 26-4: _Express: HTTP com NodeJS
+- [X] 26-5: _Express: Middlewares
+- [X] 26-6: _[Projeto - Talker Manager](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/talker-manager)_
 
 ##### Bloco 27: NodeJS
 
