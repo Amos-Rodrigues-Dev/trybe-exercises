@@ -1,39 +1,52 @@
 const connection = require('./connection');
+const { ObjectId } = require('mongodb');
 
-const query = 'SELECT * FROM model_example.books WHERE author_id=?;';
+const Author = require('./Author');
 
-const getAll = async () => {
-  const [books] = await connection.execute(
-    'SELECT * FROM model_example.books;'
+const getAll = () =>
+  connection().then(db => db.collection('books').find({}).toArray());
+
+const getByAuthorId = async authorId =>
+  connection().then(db =>
+    db
+      .collection('books')
+      .find({ author_id: Number(authorId) })
+      .toArray()
   );
 
-  return books.map(({ id, title, author_id }) => ({
-    id,
-    title,
-    authorId: author_id
-  }));
+const findById = async id => {
+  const book = await connection().then(db =>
+    db.collection('books').findOne(new ObjectId(id))
+  );
+
+  if (!book) return null;
+
+  return book;
 };
 
-const getByAuthorId = async authorId => {
-  const [books] = await connection.execute(query, [authorId]);
+const isValid = async (title, authorId) => {
+  if (!title || typeof title !== 'string') return false;
+  // Aqui a única alteração é que `authorId` deve ser uma string de 24 caracteres, e não mais um número
+  if (
+    !authorId ||
+    typeof authorId !== 'string' ||
+    authorId.length !== 24 ||
+    !(await Author.findById(authorId))
+  )
+    return false;
 
-  return books.map(({ id, title, author_id }) => ({
-    id,
-    title,
-    authorId: author_id
-  }));
+  return true;
 };
 
-const queryBook = 'SELECT * FROM model_example.books WHERE id=?;';
-
-const getByBookId = async bookId => {
-  const [book] = await connection.execute(queryBook, [bookId]);
-
-  return book[0];
-};
+const create = (title, authorId) =>
+  connection().then(db =>
+    db.collection('books').insertOne({ title, authorId })
+  );
 
 module.exports = {
   getAll,
   getByAuthorId,
-  getByBookId
+  findById,
+  isValid,
+  create
 };

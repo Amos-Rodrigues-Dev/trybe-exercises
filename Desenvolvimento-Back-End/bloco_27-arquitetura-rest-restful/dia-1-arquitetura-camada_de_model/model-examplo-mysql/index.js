@@ -1,6 +1,9 @@
+const bodyParse = require('body-parser');
 const express = require('express');
 const app = express();
 const port = 3000;
+
+app.use(bodyParse.json());
 
 const Author = require('./models/Author');
 const Book = require('./models/Book');
@@ -34,11 +37,34 @@ app.get('/authors/:id', async (req, res) => {
 app.get('/books/:id', async (req, res) => {
   const { id } = req.params;
 
-  const book = await Book.getByBookId(id);
+  const book = await Book.findById(id);
 
   if (!book) return res.status(404).json({ message: 'Book not found' });
 
   res.status(200).json(book);
+});
+
+app.post('/author', async (req, res) => {
+  const { first_name, middle_name, last_name } = req.body;
+
+  if (!Author.isValid(first_name, middle_name, last_name))
+    return res.status(400).json({ message: 'Dados inválidos' });
+
+  await Author.create(first_name, middle_name, last_name);
+
+  res.status(201).json({ message: 'Author criado com sucesso' });
+});
+
+app.post('/books', async (req, res) => {
+  const { title, author_id } = req.body;
+
+  if (!Book.isValid(title, author_id)) {
+    return res.status(400).json({ message: 'Dados inválidos' });
+  }
+
+  await Book.create(title, author_id);
+
+  res.status(201).json({ message: 'Livro criado com sucesso! ' });
 });
 
 app.listen(port, () => console.log('Example app listening on port ' + port));
