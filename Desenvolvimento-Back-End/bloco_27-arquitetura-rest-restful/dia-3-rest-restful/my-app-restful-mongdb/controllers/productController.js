@@ -23,37 +23,40 @@ router.get('/get-by-id/:id', async (req, res, next) => {
   }
 });
 
-router.post('/add-user', async (req, res) => {
+router.post('/add-user', async (req, res, next) => {
   const { name, brand } = req.body;
 
   try {
-    const newProduct = await ProductModel.add(name, brand);
+    const newProduct = await ProductService.add(name, brand);
 
     res.status(200).json(newProduct);
   } catch (e) {
-    res.status(500).send({ message: 'Algo deu errado' });
+    console.log(e.message);
+    return next(e);
   }
 });
 
-router.delete('/delete-user/:id', async (req, res) => {
+router.delete('/delete-user/:id', async (req, res, next) => {
   try {
-    const products = await ProductModel.exclude(req.params.id);
+    const product = await ProductService.exclude(req.params.id);
 
-    res.status(200).json(products);
+    res.status(200).json(product);
   } catch (e) {
-    res.status(500).send({ message: 'Algo deu errado' });
+    console.log(e.message);
+    return next(e);
   }
 });
 
-router.put('/update-user/:id', async (req, res) => {
+router.put('/update-user/:id', async (req, res, next) => {
   const { name, brand } = req.body;
 
   try {
-    const products = await ProductModel.update(req.params.id, name, brand);
+    const products = await ProductService.update(req.params.id, name, brand);
 
     res.status(200).json(products);
   } catch (e) {
-    res.status(500).send({ message: 'Algo deu errado' });
+    console.log(e.message);
+    return next(e);
   }
 });
 
