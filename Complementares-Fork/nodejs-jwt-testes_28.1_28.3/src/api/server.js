@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
 
+const validateJWT = require('../middlewares/validateJWT');
+
 const PORT = process.env.PORT || 8080;
 
 const app = express();
@@ -11,7 +13,8 @@ app.use(bodyParser.json());
 
 const apiRoutes = express.Router();
 
-apiRoutes.get('/api/posts', routes.getPosts);
+apiRoutes.get('/api/posts', validateJWT, routes.getPosts);
+apiRoutes.get('/api/users/:userId', validateJWT, routes.findUserById);
 apiRoutes.post('/api/users', routes.createUsers);
 apiRoutes.post('/api/login', routes.login);
 

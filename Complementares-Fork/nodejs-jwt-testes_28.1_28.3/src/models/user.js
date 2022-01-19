@@ -1,15 +1,22 @@
+const ObjectID = require('mongodb').ObjectId;
 const connect = require('./connection');
 
-const registerUser = async (username, password) => {
+const registerUser = async (newUser) => {
+  const { username } = newUser;
   const db = await connect();
-  const userCreated = await db.collection('users').insertOne({ username, password });
-  return userCreated.ops[0].username;
-}
+  const { insertedId } = await db.collection('users').insertOne(newUser);
+  return { _id: insertedId, username };
+};
 
 const findUser = async (username) => {
   const db = await connect();
   const userData = await db.collection('users').findOne({ username });
   return userData;
-}
+};
 
-module.exports = { registerUser, findUser };
+const findUserById = async (userId) =>
+  connect().then((db) =>
+    db.collection('users').findOne({ _id: ObjectID(userId) }),
+  );
+
+module.exports = { registerUser, findUser, findUserById };
