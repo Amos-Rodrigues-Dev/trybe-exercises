@@ -2,10 +2,10 @@ const chai = require('chai');
 const sinon = require('sinon');
 const chaiHttp = require('chai-http');
 
-const server = require('../src/api/app');
-
 const { MongoClient } = require('mongodb');
 const { MongoMemoryServer } = require('mongodb-memory-server');
+
+const server = require('../src/api/app');
 
 chai.use(chaiHttp);
 
@@ -18,6 +18,7 @@ describe('POST /api/users', () => {
 
     before(async () => {
       const URLMock = await DBServer.getUri();
+
       const connectionMock = await MongoClient.connect(URLMock, {
         useNewUrlParser: true,
         useUnifiedTopology: true,

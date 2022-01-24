@@ -6,12 +6,10 @@ chai.use(chaiHttp);
 
 const { expect } = chai;
 
-const server = require('../src/api/app');
+const server = require('../api/server');
 
 const { MongoClient } = require('mongodb');
 const { MongoMemoryServer } = require('mongodb-memory-server');
-
-// const { getConnection } = require('./connectionMock');
 
 const EXAMPLE_ID = '605de6ded1ff223100cd6aa1';
 
@@ -22,10 +20,12 @@ describe('GET /api/users/:userId', () => {
       response = await chai.request(server).get(`/api/users/${EXAMPLE_ID}`);
     });
 
-    after(() => {});
+    after(() => {
+      //
+    });
 
-    it('retorna código de status "401"', () => {
-      expect(response).to.have.status(401);
+    it('retorna código de status "400"', () => {
+      expect(response).to.have.status(400);
     });
 
     it('retorna um objeto no body', () => {
@@ -43,7 +43,7 @@ describe('GET /api/users/:userId', () => {
     });
   });
 
-  describe('Quando o usuário solicita informações de outro usuário', () => {
+  describe('Quando a pessoa usuária solicita informações de outra pessoa usuária', () => {
     let response;
     const DBServer = new MongoMemoryServer();
 
@@ -127,7 +127,7 @@ describe('GET /api/users/:userId', () => {
 
       const token = await chai
         .request(server)
-        .post('api/login')
+        .post('/api/login')
         .send({
           username: 'fake-user',
           password: 'fake-password',
@@ -141,7 +141,7 @@ describe('GET /api/users/:userId', () => {
     });
 
     after(async () => {
-      MongoClient.connect().restore();
+      MongoClient.connect.restore();
       await DBServer.stop();
     });
 
