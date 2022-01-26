@@ -1,0 +1,173 @@
+Instalação
+
+npm install pm2@latest -g
+pm2 --version
+pm2 update
+
+node index.js
+pm2 start index.js
+
+pm2 start index.js --name <NOME_DO_PROCESSO>
+\$ pm2 start index.js --name <NOME_DO_PROCESSO>
+\$ pm2 stop <NOME_DO_PROCESSO>
+\$ pm2 start <NOME_DO_PROCESSO>
+\$ pm2 stop all
+\$ pm2 delete <NOME_DO_PROCESSO>
+\$ pm2 restart <NOME_DO_PROCESSO>
+\$ pm2 reload <NOME_DO_PROCESSO>
+\$ pm2 list
+\$ pm2 ls
+\$ pm2 list --sort name:desc
+\$ pm2 show <NOME_DO_PROCESSO>
+\$ pm2 logs <NOME_DO_PROCESSO>
+\$ pm2 monit
+\$ pm2 plus
+
+Modo Cluster
+
+\$ pm2 start index.js --instances 2 --name <NOME_DO_PROCESSO>
+\$ pm2 start index.js -i max --name <NOME_DO_PROCESSO>
+
+Scaling
+
+\$ pm2 scale <NOME_DO_PROCESSO> 3
+\$ pm2 scale <NOME_DO_PROCESSO> +3
+
+Ecosystem file
+
+\$ pm2 [start|restart|stop|delete] ecosystem.config.js
+
+module.exports = {
+  apps: [
+    {
+      name: 'app',
+      script: './index.js'
+    },
+    //...
+  ]
+};
+
+\$ pm2 start ecosystem.config.js
+\$ pm2 start index.js --name <NOME_DO_PROCESSO>
+
+YAML
+
+apps:
+
+- name: app
+  script: ./index.js
+
+apps:
+
+- name: app-1
+  script: .app-1/index.js
+- name: app-2
+  script: .app-2/index.js
+- name: app-3
+  script: .app-3/index.js
+
+\$ pm2 start ecosystem.config.yml --only app-1
+\$ pm2 start ecosystem.config.yml --only "app-1,app-2"
+
+apps:
+
+- name: app
+  script: ./index.js
+  exec_mode: cluster
+  instances: 4
+
+apps:
+
+- name: app
+  script: ./index.js
+  exec_mode: cluster
+  instances: 4
+  env_prod:
+    ENVIRONMENT: PRODUCTION
+  env_homolog:
+    ENVIRONMENT: HOMOLOG
+
+    \$ pm2 start ecosystem.config.yml --env homolog
+    \$ pm2 start ecosystem.config.yml --env staging
+
+
+Auto restart
+
+\$ pm2 start index.js --name <NOME_DO_PROCESSO> --max-memory-restart 20M
+apps:
+
+- name: app
+  script: ./index.js
+  max_memory_restart: 20M
+
+  \$ pm2 start index.js --name <NOME_DO_PROCESSO> --restart-delay 100
+
+apps:
+
+- name: app
+  script: ./index.js
+  restart_delay: 100
+
+Estratégias de Backoff
+
+apps:
+
+- name: app
+  script: ./index.js
+  exp_backoff_restart_delay: 100
+
+
+Assistindo a Alterações
+
+\$ pm2 start index.js --name <NOME_DO_PROCESSO> --watch
+
+apps:
+
+- name: app
+  script: ./index.js
+  watch: ./
+
+
+PM2 com Heroku
+
+\$ npm install pm2
+
+// ...
+"scripts": {
+  "start": "pm2-runtime start ecosystem.config.yml"
+}
+// ...
+
+apps:
+
+- name: app
+  script: ./index.js
+
+  apps:
+  - name: app
+    script: ./index.js
+    exec_mode: cluster
+    instances: max
+    watch: true
+    max_memory_restart: 100M
+    env_prod:
+      ENVIRONMENT: PRODUCTION
+    env_homolog:
+      ENVIRONMENT: HOMOLOG
+
+
+Modo Cluster + Heroku
+
+apps:
+
+- name: app
+  script: ./index.js
+  exec_mode: cluster
+  instances: max
+
+
+  \$ heroku config:set \
+ PM2_PUBLIC_KEY=CHAVE_PUBLICA \
+ PM2_SECRET_KEY=CHAVE_PRIVADA \
+ PM2_MACHINE_NAME=NOME_DO_SERVER \
+ --app NOME_DO_APP_NO_HEROKU
