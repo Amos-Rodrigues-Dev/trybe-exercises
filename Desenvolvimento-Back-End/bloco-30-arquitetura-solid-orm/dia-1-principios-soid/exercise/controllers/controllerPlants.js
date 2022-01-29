@@ -1,3 +1,4 @@
+const { restart } = require('nodemon');
 const ServicePlants = require('../services/servicePlants');
 
 const getAllPlants = async (req, res) => {
@@ -6,15 +7,17 @@ const getAllPlants = async (req, res) => {
     return res.status(200).json(plants);
   } catch (error) {
     console.error(error.message);
+    return next(error);
   }
 };
 
-const salvePlants = async (req, res) => {
+const salvePlants = async (req, res, next) => {
   try {
-    const plants = await ServicePlants.savePlants();
+    const plants = await ServicePlants.savePlants(req.body);
     return res.status(201).json(plants);
   } catch (error) {
     console.error(error.message);
+    return next(error);
   }
 };
 
@@ -59,6 +62,18 @@ const editPlant = async (req, res, next) => {
   }
 };
 
+const getPlantsThatNeedsSunWithId = async (req, res, next) => {
+  try {
+    const plants = await ServicePlants.getPlantsThatNeedsSunWithId(
+      req.params.id,
+    );
+    res.status(200).json(plants);
+  } catch (error) {
+    console.error(error.message);
+    return next(error);
+  }
+};
+
 module.exports = {
   getAllPlants,
   salvePlants,
@@ -66,4 +81,5 @@ module.exports = {
   removePlantById,
   createNewPlant,
   editPlant,
+  getPlantsThatNeedsSunWithId,
 };
