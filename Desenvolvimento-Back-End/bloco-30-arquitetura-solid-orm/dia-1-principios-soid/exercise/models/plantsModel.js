@@ -30,10 +30,19 @@ async function add(plant) {
   return insertedId;
 }
 
+async function update(id, newPlnat) {
+  const db = await connection();
+  await db
+    .collection('plants')
+    .updateOne({ _id: ObjectId(id) }, { $set: newPlnat });
+  return { id, ...newPlnat };
+}
+
 module.exports = {
   getAll,
   getById,
   create,
   exclude,
   add,
+  update,
 };

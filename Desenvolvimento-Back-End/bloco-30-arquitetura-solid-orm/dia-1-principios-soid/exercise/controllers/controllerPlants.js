@@ -49,10 +49,21 @@ const createNewPlant = async (req, res, next) => {
   }
 };
 
+const editPlant = async (req, res, next) => {
+  try {
+    const plant = await ServicePlants.editPlant(req.params.id, req.body);
+    return res.status(201).json(plant);
+  } catch (error) {
+    console.error(error.message);
+    return next(error);
+  }
+};
+
 module.exports = {
   getAllPlants,
   salvePlants,
   getPlantById,
   removePlantById,
   createNewPlant,
+  editPlant,
 };

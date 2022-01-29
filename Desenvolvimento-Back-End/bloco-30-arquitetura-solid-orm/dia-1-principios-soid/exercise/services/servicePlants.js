@@ -81,15 +81,6 @@ const getPlantsThatNeedsSunWithId = (id) => {
   return filteredPlants;
 };
 
-const editPlant = (plantId, newPlant) => {
-  return defaultPlants.map((plant) => {
-    if (plant.id === plantId) {
-      return newPlant;
-    }
-    return plant;
-  });
-};
-
 const createNewPlant = async (plant) => {
   // const mappedPlant = initPlant({ ...plant });
 
@@ -100,10 +91,24 @@ const createNewPlant = async (plant) => {
   return { _id: plantId, ...plant };
 };
 
+const editPlant = async (plantId, newPlant) => {
+  if (!ObjectId.isValid(plantId))
+    throw { status: 404, message: 'Identificador Inválido' };
+
+  const plant = await PlantsModel.getById(plantId);
+
+  if (!plant) throw { status: 400, message: 'Plant not exists' };
+
+  const plantEdited = await PlantsModel.update(plantId, newPlant);
+
+  return plantEdited;
+};
+
 module.exports = {
   savePlants,
   getPlants,
   getPlantById,
   removePlantById,
   createNewPlant,
+  editPlant,
 };
