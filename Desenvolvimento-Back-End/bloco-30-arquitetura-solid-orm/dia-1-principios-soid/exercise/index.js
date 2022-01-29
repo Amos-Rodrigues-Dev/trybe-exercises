@@ -18,6 +18,7 @@ app.get('/plant/:id', controller.getPlantById);
 app.delete('/plant/:id', controller.removePlantById);
 app.post('/plant', controller.createNewPlant);
 app.post('/plant/:id', controller.editPlant);
+app.get('/sunny/:id', controller.getPlantsThatNeedsSunWithId);
 
 app.use(errorMiddleware);
 
