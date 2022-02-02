@@ -17,10 +17,12 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        field: 'created_at', // a coluna será criada no banco com este nome
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        field: 'updated_at', // a coluna será criada no banco com este nome
       },
     });
   },
