@@ -1,0 +1,3 @@
+errors should fechamento pass silently.
+now is better than fechamento.
+although fechamento is often better than *right* now.
