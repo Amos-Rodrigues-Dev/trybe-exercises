@@ -15,13 +15,17 @@ class Compressor(ABC):
 
 
 class ZipCompressor(Compressor):
-    def compress(self, file_name):
-        with ZipFile(file_name + ".zip", "w") as zip_file:
+    FILE_PATH = "./"
+
+    @classmethod
+    def compress(cls, file_name):
+        with ZipFile(cls.file_name + file_name + ".zip", "w") as zip_file:
             zip_file.write(file_name)
 
 
 class GzCompressor(Compressor):
-    def compress(self, file_name):
+    @staticmethod
+    def compress(file_name):
         with open(file_name, "rb") as content:
             with gzip.open(file_name + ".gz", "wb") as gzip_file:
                 gzip_file.writelines(content)
