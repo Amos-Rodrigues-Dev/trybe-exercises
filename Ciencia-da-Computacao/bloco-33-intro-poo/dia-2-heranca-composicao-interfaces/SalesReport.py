@@ -73,7 +73,7 @@ class SalesReportJSON(SalesReport):
 
 
 class SalesReportCSV(SalesReport):
-    FILE_EXTENSION = ".json"
+    FILE_EXTENSION = ".csv"
 
     def serialize(self):
         with open(self.get_export_file_name() + ".csv", "w") as file:
