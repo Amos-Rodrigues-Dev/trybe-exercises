@@ -205,11 +205,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 26-5: _Express: Middlewares
 - [X] 26-6: _[Projeto - Talker Manager](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/talker-manager)_
 
-##### Bloco 27: NodeJS
+##### Bloco 27: NodeJS - Camada de Serviços e Arquitetura Rest e Restful
 
-- [ ] 27-1: _Express: HTTP com Node.js_
-- [ ] 27-2: _Arquitetura de Software - Introdução ao MVC_
-- [ ] 27-3: _[Projeto - Cookmaster]()_
+- [ ] 27-1: _Introdução - Arquiterura de Software_
+- [ ] 27-1: _Arquitetura de Software - Camada de Model_
+- [ ] 27-2: _Arquitetura de Software - Camada de Controller e Service_
+- [ ] 27-3: _Arquiterura Web - Rest e Restful_
+- [ ] 27-4: _Arquitetura de Software - Testando as Camadas_
+- [ ] 27-5: _[Projeto - Store Manager]()_
 
 ##### Bloco 28: NodeJS
 
