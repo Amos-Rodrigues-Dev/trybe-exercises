@@ -244,7 +244,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 32: Projeto - App de Delivery
 
-- [X] 34-1: _[Projeto - App de Delivery](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/delivery-app)_
+- [X] 32-1: _[Projeto - App de Delivery](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/delivery-app)_
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
@@ -256,13 +256,40 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 33-3: _Testes_
 - [X] 33-4: _[Projeto - Job Insights](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/job-insights)_
 
-##### Bloco 36: Python
+##### Bloco 34: Python - POO
 
-- [ ] 35-1: _Aprendendo Python_
-- [ ] 35-2: _Testes e Exceções_
-- [ ] 35-3: _Entrada e Saída de dados_
-- [ ] 36-4: _Entrada e Saída de dados_
-- [ ] 35-5: _[Projeto ] (https://github.io)_
+- [X] 34-1: _Introdução á programação orientada a objetos_
+- [X] 34-2: _Herança, Composição e Interfaces_
+- [X] 34-3: _Padõres de projeto_
+- [X] 34-4: _[Projeto - Relatório de Estoque](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/invetory-report)_
+
+##### Bloco 35: Redes e Raspagem de Dados
+
+- [X] 35-1: _Arquitetura de redes_
+- [X] 35-2: _Rede de computadores, ferramentas e seguraça_
+- [X] 35-3: _Raspagem de dados_
+- [X] 35-4: _[Projeto - Tech News](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/tech-news)_
+
+##### Bloco 36: Algoritmos
+
+- [X] 36-1: _Complexiadade de algoritmos_
+- [X] 36-2: _Recursividade e Estratégias para solução de problemas_
+- [X] 36-3: _Algoritmos de ordenação e busca_
+- [X] 36-4: _[Projeto - Algoritmos](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/algorithms)_
+
+##### Bloco 37: Estrutura de Dados I: Arrays, Hashmaps e Sets
+
+- [ ] 37-1: _Arquitetura de Computadores_
+- [ ] 37-2: _Arrays_
+- [ ] 37-3: _Hashmap e Divt_
+- [ ] 37-4: _Set_
+- [ ] 37-5: _[Projeto - Restaurant Orders]()_
+
+##### Bloco 38: Estrutura de Dados I: Listas, Filas e Pilhas
+
+- [ ] 38-1: _Nó e Listas Encadeadas_
+- [ ] 38-2: _Pilhas e Filas_
+- [ ] 38-4: _[Projeto - TING - Trybe Is Not Google]()_
 
 ## Bônus :hourglass_flowing_sand:
 
@@ -270,4 +297,4 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
  
 - [ ] B-1: _CSS Animations - Part 1_
 - [ ] B-2: _CSS Animations - Part 2_
-- [ ] B-3: _[Projeto ] (https://github.io)_
+- [ ] B-3: _[Projeto] (https://github.io)_
