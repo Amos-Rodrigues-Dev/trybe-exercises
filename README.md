@@ -207,18 +207,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 27: NodeJS - Camada de Serviços e Arquitetura Rest e Restful
 
-- [ ] 27-1: _Introdução - Arquiterura de Software_
-- [ ] 27-1: _Arquitetura de Software - Camada de Model_
-- [ ] 27-2: _Arquitetura de Software - Camada de Controller e Service_
-- [ ] 27-3: _Arquiterura Web - Rest e Restful_
-- [ ] 27-4: _Arquitetura de Software - Testando as Camadas_
-- [ ] 27-5: _[Projeto - Store Manager]()_
+- [X] 27-1: _Introdução - Arquiterura de Software_
+- [X] 27-1: _Arquitetura de Software - Camada de Model_
+- [X] 27-2: _Arquitetura de Software - Camada de Controller e Service_
+- [X] 27-3: _Arquiterura Web - Rest e Restful_
+- [X] 27-4: _Arquitetura de Software - Testando as Camadas_
+- [X] 27-5: _[Projeto - Store Manager](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/store-manager)_
 
-##### Bloco 28: NodeJS
+##### Bloco 28: Autenticação e Upload de Arquivos
 
-- [ ] 28-1: _Arquitetura de Software - Camada de Serviço_
-- [ ] 28-2: _Arquitetura web - Rest e Restful_
-- [ ] 28-3: _[Projeto - Store Manager]()_
+- [X] 28-1: _NodeJS - JWT - (JSON Web Token)_
+- [X] 28-2: _NodeJS - Upload de arquivos com `multer`_
+- [X] 28-3: _NodeJS - Testando APIs com Testes de Integração_
+- [X] 28-4: _[Projeto - Cookmaster]()_
 
 ##### Bloco 29: NodeJS
 
