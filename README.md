@@ -146,7 +146,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 18-1: _[Projeto - App de Receitas](https://github.com/Amos-Rodrigues-Dev/project-recipes-app)_
 
 
-## Desenvolvimento Back-end :hourglass_flowing_sand:
+## Desenvolvimento Back-end :white_check_mark:
 
 ##### Bloco 19: Introdução - Bancos de dados relacionais
 
@@ -223,35 +223,38 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 29: Deployment
 
-- [X] 30-1: _Infraestrutura - Deploy com Heroku_
-- [X] 30-2: _Deploy - Gerenciadores de Processos_
-- [X] 30-3: _[Projeto - Stranger Things](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/stranger-things)_
+- [X] 29-1: _Infraestrutura - Deploy com Heroku_
+- [X] 29-2: _Deploy - Gerenciadores de Processos_
+- [X] 29-3: _[Projeto - Stranger Things](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/stranger-things)_
 
-##### Bloco 30: Introdução - Deploy
+##### Bloco 30: Arquitetura: SOLID e ORM
 
-- [X] 32-1: _Arquitetura - Princípios SOLID_
-- [X] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [X] 32-3: _ORM - Associations_
-- [X] 32-4: _[Projeto - API de Blogs]()_
+- [X] 30-1: _Arquitetura - Princípios SOLID_
+- [X] 30-2: _ORM - Interface da aplicação com o banco de dados_
+- [X] 30-3: _ORM - Associations_
+- [X] 30-4: _[Projeto - API de Blogs](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/blogs-api)_
 
-##### Bloco 33: Sockets
+##### Bloco 31: Sockets
 
-- [ ] 30-1: _Sockets - TCP/UDP & NET_
-- [ ] 30-2: _Sockets - Socket.io_
-- [ ] 30-3: _[Projeto - Webchat]()_
+- [X] 31-1: _Arquitetura de Software - Camada de View_
+- [X] 31-2: _Sockets - TCP/UDT & NET_
+- [X] 31-3: _Sockets - Socket.io_
+- [X] 31-4: _Sockets - Praticando Socket.io_
+- [X] 31-3: _[Projeto - Webchat]()_
 
-##### Bloco 34: Projeto
+##### Bloco 32: Projeto - App de Delivery
 
-- [ ] 34-1: _[Projeto - Trybeer V2]()_
+- [X] 34-1: _[Projeto - App de Delivery](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/delivery-app)_
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
-##### Bloco 35: Introdução - Ciência da Computação
+##### Bloco 33: Introdução à Python
 
-- [ ] 35-1: _Arquitetura de Computadores_
-- [ ] 35-2: _Arquitetura de redes_
-- [ ] 35-3: _Redes de computadores, ferramentas e segurança_
-- [ ] 35-4: _[Projeto ] (https://github.io)_
+- [ ] 33-1: _Introdução - Ciência da Computação_
+- [ ] 33-1: _Aprendendo Python_
+- [ ] 33-2: _Entrada e saída de dados_
+- [ ] 33-3: _Testes_
+- [ ] 33-4: _[Projeto - Job Insights](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/job-insights)_
 
 ##### Bloco 36: Python
 
