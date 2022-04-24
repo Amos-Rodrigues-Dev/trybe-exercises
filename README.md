@@ -219,31 +219,20 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 28-1: _NodeJS - JWT - (JSON Web Token)_
 - [X] 28-2: _NodeJS - Upload de arquivos com `multer`_
 - [X] 28-3: _NodeJS - Testando APIs com Testes de Integração_
-- [X] 28-4: _[Projeto - Cookmaster]()_
+- [X] 28-4: _[Projeto - Cookmaster](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/cookmaster)_
 
-##### Bloco 29: NodeJS
+##### Bloco 29: Deployment
 
-- [ ] 29-1: _NodeJS - JWT - (JSON Web Token)_
-- [ ] 29-2: _NodeJS - Upload de arquivos com Multer_
-- [ ] 29-3: _[Projeto - Cookmaster V2]()_
+- [X] 30-1: _Infraestrutura - Deploy com Heroku_
+- [X] 30-2: _Deploy - Gerenciadores de Processos_
+- [X] 30-3: _[Projeto - Stranger Things](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/stranger-things)_
 
 ##### Bloco 30: Introdução - Deploy
 
-- [ ] 30-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 30-2: _Deploy - Gerenciadores de Processos_
-- [ ] 30-3: _[Projeto - Stranger Things]()_
-
-##### Bloco 31: Projeto
-
-- [ ] 31-1: _[Projeto - Trybeer]()_
-
-##### Bloco 32: Arquitetura de Software
-
-- [ ] 32-1: _Arquitetura - Princípios SOLID_
-- [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 32-3: _Arquitetura de Software - DDD_
-- [ ] 32-4: _Boas práticas na escrita de testes_
-- [ ] 32-3: _[Projeto - API de Blogs]()_
+- [X] 32-1: _Arquitetura - Princípios SOLID_
+- [X] 32-2: _ORM - Interface da aplicação com o banco de dados_
+- [X] 32-3: _ORM - Associations_
+- [X] 32-4: _[Projeto - API de Blogs]()_
 
 ##### Bloco 33: Sockets
 
