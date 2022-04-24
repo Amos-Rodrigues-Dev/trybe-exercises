@@ -250,11 +250,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 33: Introdução à Python
 
-- [ ] 33-1: _Introdução - Ciência da Computação_
-- [ ] 33-1: _Aprendendo Python_
-- [ ] 33-2: _Entrada e saída de dados_
-- [ ] 33-3: _Testes_
-- [ ] 33-4: _[Projeto - Job Insights](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/job-insights)_
+- [X] 33-1: _Introdução - Ciência da Computação_
+- [X] 33-1: _Aprendendo Python_
+- [X] 33-2: _Entrada e saída de dados_
+- [X] 33-3: _Testes_
+- [X] 33-4: _[Projeto - Job Insights](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/job-insights)_
 
 ##### Bloco 36: Python
 
