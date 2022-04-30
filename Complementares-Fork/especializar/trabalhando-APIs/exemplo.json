@@ -1,0 +1,23 @@
+{
+  "nome": "Amós Rodrigues",
+  "email": "amos.adm.rh@gmail.com",
+  "Telefone": 33988287782,
+  "Cidade": "Goveernador Valadares",
+  "Livros_favoritos": [
+    "até o ultimo homen",
+    "velozes e furioses",
+    "essencialismo"
+  ],
+  "hobbies": {
+    "semana": "patinação",
+    "fim)de_semana": {
+      "sabaso": "cinema",
+      "domingo": "parque",
+      "outros": [
+        "caminhada",
+        "volei",
+        "netflix"
+      ]
+    }
+  }
+}
