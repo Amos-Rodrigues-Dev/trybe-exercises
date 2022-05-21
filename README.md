@@ -246,7 +246,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [X] 32-1: _[Projeto - App de Delivery](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/delivery-app)_
 
-## Ciência da Computação :hourglass_flowing_sand:
+## Ciência da Computação :white_check_mark:
 
 ##### Bloco 33: Introdução à Python
 
@@ -279,22 +279,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 37: Estrutura de Dados I: Arrays, Hashmaps e Sets
 
-- [ ] 37-1: _Arquitetura de Computadores_
-- [ ] 37-2: _Arrays_
-- [ ] 37-3: _Hashmap e Divt_
-- [ ] 37-4: _Set_
-- [ ] 37-5: _[Projeto - Restaurant Orders]()_
+- [X] 37-1: _Arquitetura de Computadores_
+- [X] 37-2: _Arrays_
+- [X] 37-3: _Hashmap e Divt_
+- [X] 37-4: _Set_
+- [X] 37-5: _[Projeto - Restaurant Orders]()_
 
 ##### Bloco 38: Estrutura de Dados I: Listas, Filas e Pilhas
 
-- [ ] 38-1: _Nó e Listas Encadeadas_
-- [ ] 38-2: _Pilhas e Filas_
-- [ ] 38-4: _[Projeto - TING - Trybe Is Not Google]()_
+- [X] 38-1: _Nó e Listas Encadeadas_
+- [X] 38-2: _Pilhas e Filas_
+- [X] 38-4: _[Projeto - TING - Trybe Is Not Google]()_
 
 ## Bônus :hourglass_flowing_sand:
 
-##### Animações com CSS
- 
-- [ ] B-1: _CSS Animations - Part 1_
-- [ ] B-2: _CSS Animations - Part 2_
-- [ ] B-3: _[Projeto] (https://github.io)_
