@@ -283,7 +283,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 37-2: _Arrays_
 - [X] 37-3: _Hashmap e Divt_
 - [X] 37-4: _Set_
-- [X] 37-5: _[Projeto - Restaurant Orders]()_
+- [X] 37-5: _[Projeto - Restaurant Orders](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/restaurant-orders)_
 
 ##### Bloco 38: Estrutura de Dados I: Listas, Filas e Pilhas
 
