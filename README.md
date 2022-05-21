@@ -289,7 +289,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [X] 38-1: _Nó e Listas Encadeadas_
 - [X] 38-2: _Pilhas e Filas_
-- [X] 38-4: _[Projeto - TING - Trybe Is Not Google]()_
+- [X] 38-4: _[Projeto - TING - Trybe Is Not Google](https://github.com/Amos-Rodrigues-Dev/projects-backend/tree/main/ting)_
 
 ## Bônus :hourglass_flowing_sand:
 
