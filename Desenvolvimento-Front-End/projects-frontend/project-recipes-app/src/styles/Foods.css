@@ -1,0 +1,27 @@
+.container-botões {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 263.88px;
+
+}
+
+.botão-All {
+  background: #c61c1c;
+  border: none;
+  border-radius: 2px;
+  height: 29px;
+  margin-top: 11px;
+  width: 80px;
+}
+
+.botões-categoria {
+  background: #c61c1c;
+  border: none;
+  border-radius: 2px;
+  height: 29px;
+  margin-top: 10px;
+  width: 80px;
+}
+

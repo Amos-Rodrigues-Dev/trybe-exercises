@@ -1,0 +1,45 @@
+.Div-Inputs {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+}
+
+.inputLogin input {
+  background: rgba(196, 196, 196, 0.43);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 29px;
+  justify-content: center;
+  width: 230px;
+}
+
+.inputLogin {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Button-Entrar {
+  align-items: center;
+  background: #c61c1c;
+  border-radius: 2px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 29px;
+  justify-content: center;
+  margin-top: 15px;
+  text-align: center;
+  top: 400px;
+  width: 100px;
+}
+
+.label-inputs {
+  font-size: 14px;
+  left: 56px;
+}
