@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Meme Generator</title>
+  <link rel="stylesheet" href="styleMeme.css">
+</head>
+<body id="body">
+  <header id="cabecalho">
+    <h1 id="titulo">Projeto: "Meme Generator - Trybe Course"</h1>
+    <nav id="navbar">
+        <ul>
+            <li> <a class="home" href="../index.html">| Home |</a> </li>
+        </ul>
+    </nav>
+  </header>
+  <div class="container-main">
+    <form class="form-container" action="">
+      <div>
+        <label for="text-input">Texto:
+          <input type="text" name="texto" required id="text-input" placeholder="Digite seu text aqui..." onkeyup="mostrarTexto()" maxlength="60">
+        </label>
+      </div>
+      <br>
+      <input type="file" name="iamgem" id="meme-insert" accept="image/*" onchange="document.getElementById('meme-image').src = window.URL.createObjectURL(this.files[0])">   
+      <div id="meme-image-container">
+        <div id="meme-text">
+        </div>
+        <div>
+          <img id="meme-image" src="" alt="Visualização de imagem">
+        </div>
+      </div>
+      <p>Estilos customizados:</p>
+      <button id="fire" type="button">Fire</button>
+      <button id="water" type="button">Water</button>
+      <button id="earth" type="button">Earth</button><br>
+      <div>
+        <p>Memes pré prontos:</p>  
+          <img id="meme-1" src="imgs/meme1.jpg" alt="imagem1">
+          <img id="meme-2" src="imgs/meme2.jpg" alt="imagem2">
+          <img id="meme-3" src="imgs/meme3.jpg" alt="imagem3">
+          <img id="meme-4" src="imgs/meme4.jpg" alt="imagem4">
+      </div>
+    </form>
+  </div>
+  <footer id="rodape">
+    <h2>Obrigado por visitar meu Portfólio !</h2>
+  </footer>
+  <script src="scriptMeme.js"></script>
+</body>
+</html>

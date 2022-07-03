@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project Shopping-cart</title>
+    <link rel="stylesheet" href="styleCart.css" />
+    <script src="scriptCart.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+          <h1 id="titulo">Projeto Shopping Cart</h1>
+      </div>
+      <div class="container">
+          <nav class="navbar" id="navbar">
+              <ul class="navbar-nav">
+                  <li class="nav-item"> <a class="nav-link-a home" href="../index.html">|&nbsp;Home&nbsp;|</a> </li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+    <main class="main-container">
+      <span class="loading container">loading...</span>
+      <form class="form-container">
+        <input type="text" id="input-search" placeholder="Ex: computador"/>
+        <button id="button-search">Pesquisar</button>
+      </form>
+      <section class="container">
+        <section class="items"></section>
+        <section class="cart">
+          <span class="cart__title">Carrinho de compras</span>
+          <button class="empty-cart">Esvaziar carrinho</button>
+          <ol class="cart__items"></ol>
+          <span class="price-container">Preço total: R$
+            <span class="total-price"></span>
+          </span>
+        </section>
+      </section>
+    </main>
+    <footer id="rodape"> 
+      <h2>Obrigado por visitar meu Portfólio !</h2>
+  </footer>
+  </body>
+</html>

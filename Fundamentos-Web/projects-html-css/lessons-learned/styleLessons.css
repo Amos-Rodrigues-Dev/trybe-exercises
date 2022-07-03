@@ -1,0 +1,209 @@
+body {
+  background-color: rgb(253, 251, 251);
+  margin: 0;
+}
+
+#cabecalho {
+  position: fixed;
+  top: 0;
+  height: 210px;
+  padding-top: 30px;
+  width: 100%;
+  background-color: rgb(3 107 82);
+  text-align: center;
+  font-size: 25px;
+  color: rgb(253, 251, 251);
+  z-index: 1;
+}
+
+#navbar ul li a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+#cabecalho a:hover {
+  transition: 0.5s;
+  font-weight: 600;
+  font-size: 35px;
+  color: rgb(253, 251, 251);
+}
+
+#navbar li {
+  display: inline-block;
+  font-size: 30px;
+}
+
+#minha_foto {
+  width: 330px;
+  margin-left: 100px;
+  border-radius: 6%;
+  display: inline;
+}
+
+.photo-contaner {
+  text-align: center;
+  width: 100%;
+  height: 450px;
+  margin-top: 260px;
+  position: relative;
+  z-index: 0;
+}
+
+#tabHobbies {
+  border-left: 6px solid rgb(3 107 82);
+  display: inline-block;
+  margin-left: 140px;
+  margin-bottom: 30px;
+  padding-left: 70px;
+  padding-top: 35px;
+  color: rgb(3 107 82);
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  height: 400px;
+  width: 600px;
+  position: relative;
+}
+
+#tabHobbies caption {
+  font-weight: 600;
+  height: 55px;
+  font-size: 35px;
+  padding-top: 20px;
+  margin-left: 30px;
+  background-color: rgb(96, 133, 132);
+  color: rgb(253, 251, 251);
+}
+
+.tablerow {
+  padding-left: 40px;
+  text-align: justify;
+  padding-top: 13px;
+}
+
+#listas {
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.1;
+  height: 480px;
+  width: 100%;
+  display: inline-block;
+  margin-top: 0;
+}
+
+#licoes_aprendidas {
+  display: inline-block;
+  text-align: justify;
+  width: 30%;
+  color: rgb(3 107 82);
+  position: relative;
+}
+
+#licoes_aprendidas li:nth-child(6) {
+  font-weight: 600;
+}
+
+#licoes_a_aprender {
+  display: inline-block;
+  text-align: justify;
+  color: rgb(3 107 82);
+  width: 30%;
+  padding-right: 6em;
+  float: right;
+  position: relative;
+}
+
+#texts {
+  text-align: center;
+  font-size: 25px;
+  width: 100%;
+  height: 350px;
+  display: inline-block;
+}
+
+.lado-esquerdo {
+  display: inline-block;
+  border-top: 6px solid rgb(3 107 82);
+  width: 45%;
+  text-align: justify;
+  color: rgb(3 107 82);
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  position: relative;
+}
+
+.lado-esquerdo span {
+  font-weight: 600;
+}
+
+.lado-direito {
+  display: inline-block;
+  border-left: 6px solid rgb(3 107 82);
+  border-top: 6px solid rgb(3 107 82);
+  width: 48%;
+  text-align: center;
+  height: 353px;
+  color: rgb(3 107 82);
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  position: relative;
+  float: right;
+}
+
+#overRedes {
+  height: 220px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.redes {
+  display: inline-block;
+  height: 175px;
+  width: 100%;
+  position: relative;
+  padding-top: 2em;
+} 
+
+#navRedes {
+  position: relative;
+  padding-top: 2em;
+  height: 65px;
+}
+
+#navRedes ul li a {
+  color: rgb(253, 251, 251);
+  list-style: none;
+  text-decoration: none;
+  background-color: rgb(3 107 82);
+  border-radius: 8%;
+  padding: 5px;
+}
+
+#navRedes a:hover {
+  font-size: 35px;
+  transition: 0.5s;
+  font-weight: 600;
+  background-color: rgb(253, 251, 251);
+  border: 4px solid rgb(3 107 82);
+  color: rgb(3 107 82);
+}
+
+#navRedes li {
+  list-style: none;
+  font-size: 30px;
+  display: inline-block;
+  padding: 5px;
+}
+
+#rodape {
+  background-color: rgb(3 107 82);
+  height: 80px;
+  width: 100%;
+  padding-top: 15px;
+  bottom: 0;
+  text-align: center;
+  position: relative;
+  color: rgb(253, 251, 251);
+  font-family: cursive;
+}

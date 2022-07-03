@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(253, 251, 251);
+  margin: 0;
+}
+
+#cabecalho {
+  position: fixed;
+  top: 0;
+  height: 210px;
+  padding-top: 30px;
+  width: 100%;
+  background-color: rgb(3 107 82);
+  text-align: center;
+  font-size: 25px;
+  color: rgb(253, 251, 251);
+  z-index: 1;
+}
+
+#navbar ul li a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+#cabecalho a:hover {
+  transition: 0.5s;
+  font-weight: 600;
+  font-size: 35px;
+  color: rgb(253, 251, 251);
+}
+
+#navbar li {
+  display: inline-block;
+  font-size: 30px;
+}
+
+.container-game {
+  margin-top: 300px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.line-game {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.ball {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-left: 10px;
+}
+
+#rodape {
+  background-color: rgb(3 107 82);
+  width: 100%;
+  padding-bottom: 15px;
+  bottom: 0;
+  text-align: center;
+  position: absolute;
+  color: rgb(253, 251, 251);
+  font-family: cursive;
+}
